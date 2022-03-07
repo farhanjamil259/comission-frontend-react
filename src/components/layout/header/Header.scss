@@ -1,0 +1,11 @@
+.header {
+  grid-area: header;
+  background-color: #14141d;
+  display: flex;
+  align-items: center;
+
+  &--link {
+    color: #fff;
+    margin: 0 16px;
+  }
+}
