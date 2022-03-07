@@ -3,24 +3,28 @@ import { useDispatch, useSelector } from "react-redux";
 import { State } from "../redux";
 import { IData, loadDataAction } from "../redux/modules/data";
 
-
-const store = [{
-  _id: "",
-  name: "",
-  desc: ""
-}, {
-  _id: "",
-  name: "",
-  desc: ""
-}, {
-  _id: "",
-  name: "",
-  desc: ""
-}, {
-  _id: "",
-  name: "",
-  desc: ""
-}]
+const store = [
+  {
+    _id: "",
+    name: "",
+    desc: "",
+  },
+  {
+    _id: "",
+    name: "",
+    desc: "",
+  },
+  {
+    _id: "",
+    name: "",
+    desc: "",
+  },
+  {
+    _id: "",
+    name: "",
+    desc: "",
+  },
+];
 
 const Home = (): React.ReactElement => {
   const dispatch = useDispatch();

@@ -99,7 +99,6 @@ export const resetDataAction =
     });
   };
 
-
 export const loadDataAction =
   (authToken: Auth.StateProps["authToken"], id: string) =>
   async (
