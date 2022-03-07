@@ -1,24 +1,18 @@
 import React from "react";
 import { StoreProvider } from "./redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { routes } from "./routes";
 import Layout from "./components/layout/Layout";
+import Login from "./pages/auth/Login";
+import Home from "./pages/Home";
 
 const App = (): React.ReactElement => {
   return (
-    <StoreProvider>
-      <BrowserRouter>
-        <Layout>
-          <Routes>
-            {routes.map((r, i) => {
-              return (
-                <Route key={i + "page-route"} path={r.path} element={r.page} />
-              );
-            })}
-          </Routes>
-        </Layout>
-      </BrowserRouter>
-    </StoreProvider>
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Home />} />
+      </Route>
+    </Routes>
   );
 };
 
