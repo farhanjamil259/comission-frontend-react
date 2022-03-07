@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import InputField from "../components/inputs/InputField";
 import { State } from "../redux";
 import { IData, loadDataAction } from "../redux/modules/data";
 
@@ -69,6 +70,8 @@ const Home = (): React.ReactElement => {
         />
         <button type="submit">Submit</button>
       </form>
+
+      <InputField label="First Name" placeholder="John Doe" />
     </div>
   );
 };

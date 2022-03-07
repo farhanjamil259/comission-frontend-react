@@ -1,0 +1,41 @@
+.igs-input {
+  height: 61px;
+  background-color: $dark1;
+  display: flex;
+  flex-direction: column;
+  padding: 11px;
+  border: 1px solid $dark2;
+  box-sizing: border-box;
+  box-shadow: inset 0px 0.5px 4px rgba(0, 0, 0, 0.32);
+  border-radius: 8px;
+
+  &:focus-within {
+    border: 1px solid $primary;
+  }
+
+  &--label {
+    color: $dark3;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0;
+    margin: 0;
+  }
+
+  &--field {
+    border: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $dark2;
+    }
+  }
+}
