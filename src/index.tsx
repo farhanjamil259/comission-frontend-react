@@ -5,6 +5,8 @@ import reportWebVitals from "./reportWebVitals";
 
 import "./index.scss";
 
+//Test line to check pipeline
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
