@@ -1,0 +1,30 @@
+.igs-container {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-areas:
+    "sidenav header"
+    "sidenav main"
+    "sidenav footer";
+  height: 100vh;
+
+  .header {
+    grid-area: header;
+    background-color: #14141d;
+  }
+
+  .sidenav {
+    grid-area: sidenav;
+    background-color: #28293d;
+  }
+
+  .main {
+    grid-area: main;
+    background-color: #1c1c28;
+  }
+
+  .footer {
+    grid-area: footer;
+    background-color: #14141d;
+  }
+}

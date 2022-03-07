@@ -1,6 +1,8 @@
 import React from "react";
-import Header from "../header/Header";
+import Header from "./header/Header";
+import Footer from "./footer/Footer";
 import "./Layout.scss";
+import SideNav from "./sidenav/SideNav";
 
 type LayoutProps = {
   children: React.ReactElement;
@@ -8,9 +10,11 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps): React.ReactElement => {
   return (
-    <div className="container">
+    <div className="igs-container">
       <Header />
-      <div>{children}</div>
+      <SideNav />
+      <main className="main">{children}</main>
+      <Footer />
     </div>
   );
 };
