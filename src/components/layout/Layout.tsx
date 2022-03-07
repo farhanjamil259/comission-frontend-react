@@ -8,9 +8,11 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps): React.ReactElement => {
   return (
-    <div className="container">
-      <Header />
-      <div>{children}</div>
+    <div className="igs-container">
+      <header className="header"></header>
+      <aside className="sidenav"></aside>
+      <main className="main">{children}</main>
+      <footer className="footer"></footer>
     </div>
   );
 };
