@@ -18,6 +18,33 @@ export interface IRoute {
   exact?: boolean;
 }
 
+export const routes: IRoute[] = [
+  {
+    title: "home",
+    path: "/",
+    page: <Home />,
+    exact: true,
+  },
+  {
+    title: "data",
+    path: "/data",
+    page: <Data />,
+    exact: true,
+  },
+  {
+    title: "Farhan Components",
+    path: "/farhan",
+    page: <FarhanComponents />,
+    exact: true,
+  },
+  {
+    title: "Ahsan Components",
+    path: "/ahsan",
+    page: <AhsanComponents />,
+    exact: true,
+  },
+];
+
 export const dashboardRoutes: IRoute[] = [
   {
     title: "home",
