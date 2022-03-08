@@ -1,0 +1,20 @@
+.login-page {
+  display: grid;
+  grid-template-columns: 1fr 600px;
+  height: 100vh;
+
+  &-section-left,
+  &-section-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-section-left {
+    background-color: $dark1;
+  }
+
+  &-section-right {
+    background-color: $dark0;
+  }
+}
