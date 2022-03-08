@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
 import LOGO from "../../../assets/images/Logo.png";
 
@@ -15,36 +16,38 @@ const menuItems: MenuItem[] = [
   },
   {
     label: "Employees",
-    path: "/",
+    path: "/employees",
     active: true,
   },
   {
     label: "Contracts",
-    path: "/",
+    path: "/contracts",
   },
   {
     label: "Teams",
-    path: "/",
+    path: "/teams",
   },
   {
     label: "Payouts",
-    path: "/",
+    path: "/payouts",
   },
   {
     label: "Report",
-    path: "/",
+    path: "/reports",
   },
   {
     label: "Settings",
-    path: "/",
+    path: "/settings",
   },
   {
     label: "Help",
-    path: "/",
+    path: "/help",
   },
 ];
 
 const SideNav = (): React.ReactElement => {
+  const location = useLocation();
+
   return (
     <aside className="sidenav">
       <div className="sidenav-header">
@@ -53,14 +56,17 @@ const SideNav = (): React.ReactElement => {
       <div className="sidenav-menu">
         {menuItems.map((item, itemIndex) => {
           return (
-            <div
+            <Link
               className={`sidenav-menu--link ${
-                item.active ? "sidenav-menu--link--active" : ""
+                location.pathname === item.path
+                  ? "sidenav-menu--link--active"
+                  : ""
               }`}
+              to={item.path}
               key={itemIndex + "sideNavItem"}
             >
               {item.label}
-            </div>
+            </Link>
           );
         })}
       </div>
