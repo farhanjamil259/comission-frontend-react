@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #363750;
+    background-color: $dark2;
     height: 87px;
   }
 
@@ -41,12 +41,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ff5c5c;
+    background-color: $red2;
     min-height: 48px;
     margin-top: auto;
 
     &:hover {
-      background-color: #ff3b3b;
+      background-color: $red1;
     }
   }
 }

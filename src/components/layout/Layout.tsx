@@ -1,19 +1,17 @@
 import React from "react";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
-import "./Layout.scss";
 import SideNav from "./sidenav/SideNav";
+import { Outlet } from "react-router-dom";
 
-type LayoutProps = {
-  children: React.ReactElement;
-};
-
-const Layout = ({ children }: LayoutProps): React.ReactElement => {
+const Layout = (): React.ReactElement => {
   return (
     <div className="igs-container">
       <Header />
       <SideNav />
-      <main className="main">{children}</main>
+      <main className="main">
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );

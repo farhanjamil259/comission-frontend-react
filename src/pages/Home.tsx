@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Button from "../components/button/Button";
 import InputField from "../components/inputs/InputField";
 import { State } from "../redux";
 import { IData, loadDataAction } from "../redux/modules/data";
@@ -36,8 +37,6 @@ const Home = (): React.ReactElement => {
     name: "",
   });
 
-  //test comment
-
   const handleSubmit = async (
     e: React.FormEvent<HTMLFormElement>
   ): Promise<void> => {
@@ -72,6 +71,16 @@ const Home = (): React.ReactElement => {
       </form>
 
       <InputField label="First Name" placeholder="John Doe" />
+
+      <div>
+        <Button variant="primary" text="Submit" />
+        <Button variant="success" text="Submit" />
+        <Button text="Submit" />
+      </div>
+      <div>
+        <Button rounded variant="primary" text="Submit" />
+        <Button rounded variant="success" text="Submit" />
+      </div>
     </div>
   );
 };

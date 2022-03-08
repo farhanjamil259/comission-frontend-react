@@ -2,8 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 
 @import "variables";
+
 @import "../components/inputs/InputField.scss";
 @import "../components/layout/sidenav/SideNav.scss";
+@import "../components/layout/Layout.scss";
+@import "../components/button/Button.scss";
+@import "../components/layout/header/Header.scss";
 
 body {
   padding: 0;
