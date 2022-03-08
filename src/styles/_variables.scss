@@ -1,10 +1,44 @@
 //Colors
+$primary: #3e7bfa;
+$primary-dark: #3568d4;
+$primary-light: #6698fa;
+$primary-lighter: #ccddff;
+
 $dark0: #1c1c28;
 $dark1: #28293d;
 $dark2: #555770;
 $dark3: #8f90a6;
 $dark4: #c7c9d9;
 
-$test: #555770;
+$light0: #e4e4eb;
+$light1: #ebebf0;
+$light2: #f2f2f5;
+$light3: #fafafc;
+$light4: #ffffff;
 
-$primary: #3e7bfa;
+$red0: #e63535;
+$red1: #ff3b3b;
+$red2: #ff5c5c;
+$red3: #ff8080;
+
+$green0: "#";
+$green1: "#";
+$green4: "#";
+
+$blue0: "#";
+$blue1: "#";
+$blue4: "#";
+
+$yellow0: "#";
+$yellow1: "#";
+
+$teal0: "#";
+$teal1: "#";
+$teal4: "#";
+
+// Gradients
+$gradient-primary: linear-gradient(147.14deg, #73dfe7 6.95%, #0063f7 93.05%);
+$gradient-warning: linear-gradient(147.14deg, #ff8800 6.95%, #e63535 93.05%);
+$gradient-success: linear-gradient(147.14deg, #00cfde 6.95%, #05a660 93.05%);
+$gradient-success2: linear-gradient(145.51deg, #fddd48 7.21%, #00b7c4 94.47%);
+$gradient-danger: linear-gradient(147.14deg, #ff3b3b 6.95%, #6600cc 93.05%);
