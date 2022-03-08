@@ -1,0 +1,48 @@
+.sidenav {
+  grid-area: sidenav;
+  background-color: #28293d;
+  display: flex;
+  flex-direction: column;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #363750;
+    height: 87px;
+  }
+
+  &-menu {
+    margin-top: 48px;
+    width: 100%;
+
+    &--link {
+      cursor: pointer;
+      margin: 5px 15px;
+      padding: 4px 15px;
+      border-radius: 16px;
+
+      &:hover {
+        background-color: $primary;
+      }
+
+      &--active {
+        background-color: $dark2;
+      }
+    }
+  }
+
+  &-footer {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff5c5c;
+    min-height: 48px;
+    margin-top: auto;
+
+    &:hover {
+      background-color: #ff3b3b;
+    }
+  }
+}
