@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { dashboardRoutes } from "../../../AppRoutes";
+import { routes } from "../../../AppRoutes";
 
 const Header = (): React.ReactElement => {
   return (
     <header className="header">
-      {dashboardRoutes.map((route, routeIndex) => {
+      {routes.map((route, routeIndex) => {
         return (
           <Link
             className="header--link"

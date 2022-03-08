@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
-import "./Layout.scss";
 import SideNav from "./sidenav/SideNav";
 import { Outlet } from "react-router-dom";
 

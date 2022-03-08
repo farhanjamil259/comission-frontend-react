@@ -8,18 +8,13 @@
     "sidenav footer";
   height: 100vh;
 
-  .sidenav {
-    grid-area: sidenav;
-    background-color: #28293d;
-  }
-
   .main {
     grid-area: main;
-    background-color: #1c1c28;
+    background-color: $dark0;
   }
 
   .footer {
     grid-area: footer;
-    background-color: #14141d;
+    background-color: $dark1;
   }
 }
