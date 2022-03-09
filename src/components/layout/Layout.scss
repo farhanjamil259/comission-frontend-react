@@ -10,11 +10,11 @@
 
   .main {
     grid-area: main;
-    background-color: $dark0;
+    background-color: $dark-500;
   }
 
   .footer {
     grid-area: footer;
-    background-color: $dark1;
+    background-color: $dark-400;
   }
 }
