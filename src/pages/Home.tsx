@@ -4,6 +4,7 @@ import Button from "../components/button/Button";
 import InputField from "../components/inputs/InputField";
 import { State } from "../redux";
 import { IData, loadDataAction } from "../redux/modules/data";
+import Text from "../components/text/Text";
 
 const store = [
   {
@@ -45,7 +46,8 @@ const Home = (): React.ReactElement => {
   };
   return (
     <div>
-      <h1>HomePage</h1>
+      <Text type="heading-6">asd</Text>
+
       <ul>
         {reduxStateData.data.map((d, i) => {
           return <li key={i + "datalist"}>{d.name}</li>;
@@ -74,6 +76,7 @@ const Home = (): React.ReactElement => {
 
       <div>
         <Button variant="primary" text="Submit" />
+        <h6>asd</h6>
         <Button variant="success" text="Submit" />
         <Button text="Submit" />
       </div>

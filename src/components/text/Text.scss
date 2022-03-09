@@ -1,0 +1,138 @@
+// font weight
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semi-bold: 600;
+$weight-bold: 700;
+
+.igs-text{
+    font-size: 14px;
+    letter-spacing: 0;
+    margin: 0; 
+    padding: 0;
+}
+
+// label
+.igs-label{
+    &--small {
+        font-size: 10px;
+        font-weight: $weight-medium;
+        letter-spacing: 0.2px;
+    }
+
+    &--medium {
+        font-size: 12px;
+        font-weight: $weight-medium;
+        letter-spacing: 0.2px;
+    }
+
+    &--large {
+        font-size: 14px;
+        font-weight: $weight-medium;
+        
+    }
+}
+
+// body
+.igs-body{
+    &--1 {
+        font-size: 16px;
+        font-weight: $weight-regular;
+        letter-spacing: 0;
+    }
+
+    &--2 {
+        font-size: 14px;
+        font-weight: $weight-regular;
+        letter-spacing: 0;
+    }
+}
+
+// heading
+.igs-heading{
+    &--1 {
+        font-size: 40px;
+        font-weight: $weight-bold;
+        letter-spacing: 0;
+    }
+
+    &--2 {
+        font-size: 32px;
+        font-weight: $weight-bold;
+        letter-spacing: 0;
+    }
+
+    &--3 {
+        font-size: 28px;
+        font-weight: $weight-bold;
+        letter-spacing: 0;
+    }
+
+    &--4 {
+        font-size: 24px;
+        font-weight: $weight-bold;
+        letter-spacing: 0;
+    }
+
+    &--5 {
+        font-size: 20px;
+        font-weight: $weight-bold;
+        letter-spacing: 0;
+    }
+
+    &--6 {
+        font-size: 16px;
+        font-weight: $weight-bold;
+        letter-spacing: 0;
+    }
+}
+
+// display
+.igs-display{
+    &--1 {
+        font-size: 64px;
+        font-weight: $weight-bold;
+        letter-spacing: 0;
+    }
+
+    &--2 {
+        font-size: 56px;
+        font-weight: $weight-bold;
+        letter-spacing: 0;
+    }
+}
+
+// stylized
+.igs-stylized{
+    &--capitalized {
+        font-size: 14px;
+        font-weight: $weight-regular;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    &--blockquote {
+        font-size: 20px;
+        font-weight: $weight-semi-bold;
+        
+    }
+
+    &--lead {
+        font-size: 14px;
+        font-weight: $weight-bold;
+        
+    }
+
+    &--small {
+        font-size: 12px;
+        font-weight: $weight-regular;
+        
+    }
+
+    &--tiny {
+        font-size: 10px;
+        font-weight: $weight-semi-bold;
+        
+    }
+}
+
+
