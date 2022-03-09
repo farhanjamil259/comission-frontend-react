@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Button from "../components/button/Button";
+import Chart from "../components/chart/Chart";
 import InputField from "../components/inputs/InputField";
 import { State } from "../redux";
 import { IData, loadDataAction } from "../redux/modules/data";
@@ -45,6 +46,10 @@ const Home = (): React.ReactElement => {
   };
   return (
     <div>
+      <h1>Chart</h1>
+
+      <Chart />
+
       <h1>HomePage</h1>
       <ul>
         {reduxStateData.data.map((d, i) => {
