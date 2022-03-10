@@ -48,7 +48,7 @@ const generateTag = (type: TextProps["type"]): string => {
   }
 };
 
-const text = ({
+const Text = ({
   type,
   children,
   className,
@@ -60,9 +60,9 @@ const text = ({
 
   return React.createElement(
     generateTag(type),
-    { ...otherProps, className: customClassName },
+    { ...otherProps, className: `${customClassName} ${className}` },
     children
   );
 };
 
-export default text;
+export default Text;
