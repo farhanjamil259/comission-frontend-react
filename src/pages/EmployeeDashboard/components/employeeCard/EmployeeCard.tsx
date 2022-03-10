@@ -1,7 +1,7 @@
 import React from "react";
-import Avatar from "../../components/avatar/Avatar";
-import Card from "../../components/card/Card";
-import Text from "../../components/text/Text";
+import Avatar from "../../../../components/avatar/Avatar";
+import Card from "../../../../components/card/Card";
+import Text from "../../../../components/text/IGSText";
 
 const EmployeeCard = (): React.ReactElement => {
   return (

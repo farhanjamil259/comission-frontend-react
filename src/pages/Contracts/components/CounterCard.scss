@@ -1,0 +1,21 @@
+.counter-card {
+  padding: 0 32px;
+  margin-right: 16px;
+  border-right: 1px solid $dark-300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &--value {
+    color: $dark-100;
+  }
+
+  &--title {
+    color: $dark-200;
+  }
+
+  &--no-border {
+    border: none;
+  }
+}
