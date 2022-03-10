@@ -11,6 +11,7 @@
   .main {
     grid-area: main;
     background-color: $dark-500;
+    overflow: auto;
   }
 
   .footer {
