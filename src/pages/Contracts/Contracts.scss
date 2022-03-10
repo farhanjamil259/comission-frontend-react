@@ -18,8 +18,21 @@ $margin-main: 28px;
   }
 
   &-section--actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: $margin-main;
+    margin-top: $margin-main + 10px;
+
+    &-left {
+      width: 282px;
+    }
   }
 
   &-section--contracts {
+    margin: $margin-main;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
