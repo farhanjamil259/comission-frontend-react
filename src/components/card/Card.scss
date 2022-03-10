@@ -1,0 +1,15 @@
+.igs-card {
+  background-color: $dark-400;
+  border-radius: 16px;
+  padding: 29px;
+  display: flex;
+  box-shadow: $elivation-3-dark;
+
+  &--radius-half {
+    border-radius: 8px;
+  }
+
+  &--radius-none {
+    border-radius: 0;
+  }
+}

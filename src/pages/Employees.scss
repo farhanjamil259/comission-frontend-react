@@ -1,0 +1,24 @@
+.employees-page {
+  padding: 28px;
+
+  &-section-id {
+    margin-bottom: 44px;
+  }
+
+  &-section-tools {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &-left {
+      width: 282px;
+    }
+  }
+
+  &-section-employees {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+  }
+}

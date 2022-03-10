@@ -9,6 +9,11 @@
 @import "../components/button/Button.scss";
 @import "../components/layout/header/Header.scss";
 @import "../pages/auth/Login.scss";
+@import "../components/card/Card.scss";
+@import "../components/avatar/Avatar.scss";
+@import "../partials/employeeIdCard/EmployeeIdCard.scss";
+@import "../partials/employeeCard/EmployeeCard.scss";
+@import "../pages/Employees.scss";
 
 body {
   padding: 0;
