@@ -1,4 +1,6 @@
 .igs-input {
+  $parent: &;
+
   background-color: $dark-400;
   display: flex;
   padding: 13px;
@@ -11,36 +13,36 @@
     border: 2px solid $primary-400;
   }
 
-  &--container {
+  &__container {
     display: flex;
     flex-direction: column;
-  }
 
-  &--label {
-    color: $dark-200;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-    padding: 0;
-    margin: 0;
-    text-transform: uppercase;
-  }
-
-  &--field {
-    border: none;
-    appearance: none;
-    background-color: transparent;
-    color: $light-300;
-    padding: 2px 0 0 0;
-    margin: 0 0 0 0;
-    font-size: 14px;
-
-    &:focus {
-      outline: none;
+    #{$parent}__label {
+      color: $dark-200;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      padding: 0;
+      margin: 0;
+      text-transform: uppercase;
     }
 
-    &::placeholder {
-      color: $dark-300;
+    #{$parent}__field {
+      border: none;
+      appearance: none;
+      background-color: transparent;
+      color: $light-300;
+      padding: 2px 0 0;
+      margin: 0;
+      font-size: 14px;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $dark-300;
+      }
     }
   }
 }

@@ -43,16 +43,16 @@ const IGSInput = ({
 }: IIGSInputProps): React.ReactElement => {
   return (
     <div className="igs-input">
-      <div className="igs-icon--addon"></div>
-      <div className="igs-input--container">
-        <label className="igs-input--label">{label}</label>
+      <div className="igs-input__icon"></div>
+      <div className="igs-input__container">
+        <label className="igs-input__label">{label}</label>
         <input
           type={type ?? "text"}
-          className="igs-input--field"
+          className="igs-input__field"
           placeholder={placeholder}
         />
       </div>
-      <div className="igs-icon--addon"></div>
+      <div className="igs-input__icon"></div>
     </div>
   );
 };
