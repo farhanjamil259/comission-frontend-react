@@ -9,6 +9,8 @@
   box-shadow: inset 0 0.5px 4px rgb(0 0 0 / 32%);
   border-radius: 8px;
   align-items: center;
+  max-height: 65px;
+  cursor: text;
 
   &:focus-within {
     border: 2px solid $primary-400;
@@ -21,6 +23,8 @@
     width: 100%;
 
     #{$parent}__label {
+      //TODO: find a better way to handle cursor
+      cursor: text;
       color: $dark-200;
       font-weight: 500;
       font-size: 12px;

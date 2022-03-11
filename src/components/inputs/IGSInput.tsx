@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createRef, useEffect } from "react";
 import { IconTypes } from "../icon/Icons";
 import IGSIcon from "../icon/IGSIcon";
 
@@ -17,48 +17,43 @@ interface IIGSInputProps {
     | "ssn"
     | "phone"
     | "currency"
-    | "calendar-day";
+    | "calendar-day"
+    | "search";
   placeholder?: string;
-  options?: IData[];
-  required?: boolean;
-  disabled?: boolean;
-  preIcon?: IconTypes;
-  postIcon?: IconTypes;
-  postIconClick?: () => void;
+  showIcon?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  value?: string;
 }
 
-// TODO: Suggest and append is must
-const IGSInputDropDown = (): React.ReactElement => {
-  return <div></div>;
+const generateIcon = (type: IIGSInputProps["type"]): IconTypes | undefined => {
+  if (type === "password") return "lock";
+  if (type === "email") return "email";
+  if (type === "search") return "search";
 };
 
 const IGSInput = (props: IIGSInputProps): React.ReactElement => {
+  const inputRef = createRef<HTMLInputElement>();
+
   return (
-    <div className="igs-input">
-      {!!props.preIcon && (
-        <div className="igs-input__icon igs-input__icon--pre">
-          <IGSIcon type={props.preIcon} />
-        </div>
-      )}
+    <div
+      className="igs-input"
+      onClick={(): void => {
+        inputRef.current?.focus();
+      }}
+    >
+      {props.showIcon && <IGSIcon type={generateIcon(props.type)} />}
       <div className="igs-input__container">
         <label className="igs-input__label">{props.label}</label>
         <input
+          value={props.value}
           onChange={props.onChange}
-          type={props.type ?? "text"}
+          type={(props.type === "password" && "password") || undefined}
+          ref={inputRef}
           className="igs-input__field"
           placeholder={props.placeholder}
         />
-        <IGSInputDropDown />
       </div>
-      {!!props.postIcon && (
-        <div
-          className="igs-input__icon igs-input__icon--post igs-input__icon--clickable"
-          onClick={props.postIconClick}
-        >
-          <IGSIcon type={props.postIcon} />
-        </div>
-      )}
+      {props.type === "password" && <IGSIcon type="eye" />}
     </div>
   );
 };
