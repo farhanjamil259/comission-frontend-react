@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 
 @import "variables";
-@import "../components/text/Text";
+@import "../components/text/IGSText";
 @import "../components/inputs/InputField";
 @import "../components/layout/sidenav/SideNav";
 @import "../components/layout/Layout";
@@ -10,9 +10,12 @@
 @import "../components/layout/header/Header";
 @import "../pages/auth/Login";
 @import "../components/card/Card";
-@import "../partials/employeeIdCard/EmployeeIdCard";
-@import "../partials/employeeCard/EmployeeCard";
-@import "../pages/Employees";
+@import "../pages/EmployeeDashboard/components/employeeIdCard/EmployeeIdCard";
+@import "../pages/EmployeeDashboard/components/employeeCard/EmployeeCard";
+@import "../pages/EmployeeDashboard/Employees";
+@import "../pages/Contracts/Contracts";
+@import "../pages/Contracts/components/CounterCard";
+@import "../pages/Contracts/components/ContractCard";
 
 body {
   padding: 0;

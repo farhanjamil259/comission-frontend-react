@@ -1,15 +1,14 @@
-// font family
-$font-family: "Inter", sans-serif;
-
 // font weight
 $weight-regular: 400;
 $weight-medium: 500;
 $weight-semi-bold: 600;
 $weight-bold: 700;
 
-// core class for all typography components
-.igs-typography {
-  font-family: $font-family;
+.igs-text {
+  font-size: 14px;
+  letter-spacing: 0;
+  margin: 0;
+  padding: 0;
 }
 
 // label
@@ -18,21 +17,17 @@ $weight-bold: 700;
     font-size: 10px;
     font-weight: $weight-medium;
     letter-spacing: 0.2px;
-    line-height: 14;
   }
 
   &--medium {
     font-size: 12px;
     font-weight: $weight-medium;
     letter-spacing: 0.2px;
-    line-height: 16;
   }
 
   &--large {
     font-size: 14px;
     font-weight: $weight-medium;
-    letter-spacing: 0;
-    line-height: 24;
   }
 }
 
@@ -42,14 +37,12 @@ $weight-bold: 700;
     font-size: 16px;
     font-weight: $weight-regular;
     letter-spacing: 0;
-    line-height: 24;
   }
 
   &--2 {
     font-size: 14px;
     font-weight: $weight-regular;
     letter-spacing: 0;
-    line-height: 24;
   }
 }
 
@@ -59,42 +52,36 @@ $weight-bold: 700;
     font-size: 40px;
     font-weight: $weight-bold;
     letter-spacing: 0;
-    line-height: 54;
   }
 
   &--2 {
     font-size: 32px;
     font-weight: $weight-bold;
     letter-spacing: 0;
-    line-height: 44;
   }
 
   &--3 {
     font-size: 28px;
     font-weight: $weight-bold;
     letter-spacing: 0;
-    line-height: 38;
   }
 
   &--4 {
     font-size: 24px;
     font-weight: $weight-bold;
     letter-spacing: 0;
-    line-height: 32;
   }
 
   &--5 {
     font-size: 20px;
     font-weight: $weight-bold;
     letter-spacing: 0;
-    line-height: 28;
   }
 
   &--6 {
     font-size: 16px;
     font-weight: $weight-bold;
     letter-spacing: 0;
-    line-height: 22;
   }
 }
 
@@ -104,14 +91,12 @@ $weight-bold: 700;
     font-size: 64px;
     font-weight: $weight-bold;
     letter-spacing: 0;
-    line-height: auto;
   }
 
   &--2 {
     font-size: 56px;
     font-weight: $weight-bold;
     letter-spacing: 0;
-    line-height: auto;
   }
 }
 
@@ -121,35 +106,26 @@ $weight-bold: 700;
     font-size: 14px;
     font-weight: $weight-regular;
     letter-spacing: 2px;
-    line-height: auto;
     text-transform: uppercase;
   }
 
   &--blockquote {
     font-size: 20px;
-    font-weight: $weight-semibold;
-    letter-spacing: 0;
-    line-height: 28;
+    font-weight: $weight-semi-bold;
   }
 
   &--lead {
     font-size: 14px;
     font-weight: $weight-bold;
-    letter-spacing: 0;
-    line-height: 24;
   }
 
   &--small {
     font-size: 12px;
     font-weight: $weight-regular;
-    letter-spacing: 0;
-    line-height: auto;
   }
 
   &--tiny {
     font-size: 10px;
     font-weight: $weight-semi-bold;
-    letter-spacing: 0;
-    line-height: auto;
   }
 }

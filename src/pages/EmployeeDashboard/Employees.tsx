@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "../components/button/Button";
-import InputField from "../components/inputs/InputField";
-import EmployeeCard from "../partials/employeeCard/EmployeeCard";
-import EmployeeIdCard from "../partials/employeeIdCard/EmployeeIdCard";
+import Button from "../../components/button/Button";
+import InputField from "../../components/inputs/InputField";
+import EmployeeCard from "./components/employeeCard/EmployeeCard";
+import EmployeeIdCard from "./components/employeeIdCard/EmployeeIdCard";
 
 const Employees = (): React.ReactElement => {
   return (

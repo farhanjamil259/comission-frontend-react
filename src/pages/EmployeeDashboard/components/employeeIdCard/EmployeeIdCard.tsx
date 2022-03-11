@@ -1,8 +1,7 @@
 import React from "react";
-import Avatar from "../../components/avatar/Avatar";
-import Card from "../../components/card/Card";
-
-import Text from "../../components/text/Text";
+import Avatar from "../../../../components/avatar/Avatar";
+import Card from "../../../../components/card/Card";
+import Text from "../../../../components/text/IGSText";
 
 const employees = [1, 2, 3, 4, 5];
 

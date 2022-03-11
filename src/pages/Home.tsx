@@ -4,7 +4,7 @@ import Button from "../components/button/Button";
 import InputField from "../components/inputs/InputField";
 import { State } from "../redux";
 import { IData, loadDataAction } from "../redux/modules/data";
-import Text from "../components/text/Text";
+import IGSText from "../components/text/IGSText";
 
 const store = [
   {
@@ -46,7 +46,7 @@ const Home = (): React.ReactElement => {
   };
   return (
     <div>
-      <Text type="heading-6">asd</Text>
+      <IGSText type="heading-6">asd</IGSText>
 
       <ul>
         {reduxStateData.data.map((d, i) => {

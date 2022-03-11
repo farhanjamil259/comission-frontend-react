@@ -48,7 +48,7 @@ const generateTag = (type: TextProps["type"]): string => {
   }
 };
 
-const Text = ({
+const IGSText = ({
   type,
   children,
   className,
@@ -65,4 +65,4 @@ const Text = ({
   );
 };
 
-export default Text;
+export default IGSText;
