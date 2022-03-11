@@ -8,6 +8,7 @@
   box-sizing: border-box;
   box-shadow: inset 0 0.5px 4px rgb(0 0 0 / 32%);
   border-radius: 8px;
+  align-items: center;
 
   &:focus-within {
     border: 2px solid $primary-400;
@@ -15,7 +16,9 @@
 
   &__container {
     display: flex;
+    justify-content: between;
     flex-direction: column;
+    width: 100%;
 
     #{$parent}__label {
       color: $dark-200;
@@ -44,5 +47,17 @@
         color: $dark-300;
       }
     }
+  }
+
+  #{$parent}__icon {
+    color: $dark-200;
+  }
+
+  #{$parent}__icon--pre {
+    margin-right: 10px;
+  }
+
+  #{$parent}__icon--post {
+    margin-left: 10px;
   }
 }
