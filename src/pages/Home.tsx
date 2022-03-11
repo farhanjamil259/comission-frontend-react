@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Button from "../components/button/Button";
-import InputField from "../components/inputs/InputField";
+import IGSInput from "../components/inputs/IGSInput";
 import { State } from "../redux";
 import { IData, loadDataAction } from "../redux/modules/data";
 import IGSText from "../components/text/IGSText";
@@ -72,7 +72,7 @@ const Home = (): React.ReactElement => {
         <button type="submit">Submit</button>
       </form>
 
-      <InputField label="First Name" placeholder="John Doe" />
+      <IGSInput label="First Name" placeholder="John Doe" />
 
       <div>
         <Button variant="primary" text="Submit" />

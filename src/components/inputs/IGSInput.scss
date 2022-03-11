@@ -1,16 +1,19 @@
 .igs-input {
-  height: 40px;
   background-color: $dark-400;
   display: flex;
-  flex-direction: column;
-  padding: 11px;
-  border: 1px solid $dark-300;
+  padding: 13px;
+  border: 2px solid $dark-300;
   box-sizing: border-box;
   box-shadow: inset 0 0.5px 4px rgb(0 0 0 / 32%);
   border-radius: 8px;
 
   &:focus-within {
-    border: 1px solid $primary-400;
+    border: 2px solid $primary-400;
+  }
+
+  &--container {
+    display: flex;
+    flex-direction: column;
   }
 
   &--label {
@@ -20,15 +23,17 @@
     line-height: 16px;
     padding: 0;
     margin: 0;
+    text-transform: uppercase;
   }
 
   &--field {
     border: none;
     appearance: none;
     background-color: transparent;
-    color: #fff;
-    padding: 0;
-    margin: 0;
+    color: $light-300;
+    padding: 2px 0 0 0;
+    margin: 0 0 0 0;
+    font-size: 14px;
 
     &:focus {
       outline: none;

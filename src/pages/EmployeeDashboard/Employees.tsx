@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../../components/button/Button";
-import InputField from "../../components/inputs/InputField";
+import InputField from "../../components/inputs/IGSInput";
 import EmployeeCard from "./components/employeeCard/EmployeeCard";
 import EmployeeIdCard from "./components/employeeIdCard/EmployeeIdCard";
 

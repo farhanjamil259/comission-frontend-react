@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../../components/card/Card";
 import CalenderImage from "../../assets/images/Calender.png";
 import CounterCard from "./components/CounterCard";
-import InputField from "../../components/inputs/InputField";
+import IGSInput from "../../components/inputs/IGSInput";
 import Button from "../../components/button/Button";
 import Contract from "./components/ContractCard";
 
@@ -27,7 +27,7 @@ const Contracts = (): React.ReactElement => {
       </div>
       <div className="contracts-page-section--actions">
         <div className="contracts-page-section--actions-left">
-          <InputField placeholder="Search" />
+          <IGSInput placeholder="Search" />
         </div>
         <Button variant="success" text="Create Contract" />
       </div>
