@@ -43,7 +43,7 @@ const IGSInput = ({
 }: IIGSInputProps): React.ReactElement => {
   return (
     <div className="igs-input">
-      <div className="igs-icon--pre"></div>
+      <div className="igs-icon--addon"></div>
       <div className="igs-input--container">
         <label className="igs-input--label">{label}</label>
         <input
@@ -52,7 +52,7 @@ const IGSInput = ({
           placeholder={placeholder}
         />
       </div>
-      <div className="igs-icon--action"></div>
+      <div className="igs-icon--addon"></div>
     </div>
   );
 };
