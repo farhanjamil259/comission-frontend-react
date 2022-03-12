@@ -8,6 +8,9 @@ export const icons = {
   down: "akar-icons:chevron-down",
   up: "akar-icons:chevron-up",
   tick: "akar-icons:circle-check-fill",
+  dollar: "emojione-v1:heavy-dollar-sign",
+  calender: "uil:calender",
+  percent: "fa-solid:percent",
 };
 
 export type IconTypes = keyof typeof icons;

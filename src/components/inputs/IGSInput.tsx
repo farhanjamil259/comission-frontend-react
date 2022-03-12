@@ -18,7 +18,8 @@ interface IIGSInputProps {
     | "phone"
     | "currency"
     | "calendar-day"
-    | "search";
+    | "search"
+    | "rate";
   placeholder?: string;
   showIcon?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -30,6 +31,8 @@ const generateIcon = (type: IIGSInputProps["type"]): IconTypes | undefined => {
   if (type === "email") return "email";
   if (type === "search") return "search";
 };
+
+// TODO: implement format for currency
 
 const IGSInput = (props: IIGSInputProps): React.ReactElement => {
   const inputRef = createRef<HTMLInputElement>();
@@ -54,6 +57,10 @@ const IGSInput = (props: IIGSInputProps): React.ReactElement => {
         />
       </div>
       {props.type === "password" && <IGSIcon type="eye" />}
+      {props.type === "currency" && <IGSIcon type="dollar" />}
+      {props.type === "calendar-day" && <IGSIcon type="calender" />}
+      {props.type === "calendar-day" && <IGSIcon type="calender" />}
+      {props.type === "rate" && <IGSIcon type="percent" />}
     </div>
   );
 };
