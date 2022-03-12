@@ -7,6 +7,7 @@ export const icons = {
   close: "ei:close",
   down: "akar-icons:chevron-down",
   up: "akar-icons:chevron-up",
+  tick: "akar-icons:circle-check-fill",
 };
 
 export type IconTypes = keyof typeof icons;
