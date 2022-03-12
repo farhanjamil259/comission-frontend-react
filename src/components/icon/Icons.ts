@@ -4,6 +4,9 @@ export const icons = {
   email: "clarity:email-line",
   search: "ant-design:search-outlined",
   right: "bi:arrow-right",
+  close: "ei:close",
+  down: "akar-icons:chevron-down",
+  up: "akar-icons:chevron-up",
 };
 
 export type IconTypes = keyof typeof icons;

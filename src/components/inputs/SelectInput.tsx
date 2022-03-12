@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import IGSIcon from "../icon/IGSIcon";
 
 export interface SelectOptions {
@@ -18,6 +18,15 @@ const SelectInput = (props: SelectInputProps): React.ReactElement => {
 
   const dropdownContainerRef = useRef<HTMLDivElement>(null);
 
+  const [inputValue, setInputValue] = useState<string>("");
+
+  const filteredOptions = useMemo(() => {
+    return props.options?.filter((o) => {
+      return o.label.includes(inputValue) || o.value.includes(inputValue);
+    });
+  }, [inputValue, props.options]);
+
+  // TODO: Fix bug clicking again does not close
   useEffect(() => {
     if (isOpened) {
       const handler = (e: MouseEvent): void => {
@@ -34,7 +43,7 @@ const SelectInput = (props: SelectInputProps): React.ReactElement => {
   }, [isOpened, dropdownContainerRef]);
 
   const toggleDropdown = (): void => {
-    setIsOpened(!isOpened);
+    isOpened ? setIsOpened(false) : setIsOpened(true);
   };
 
   return (
@@ -55,7 +64,8 @@ const SelectInput = (props: SelectInputProps): React.ReactElement => {
               <input
                 type="text"
                 className="select-input__field"
-                value={props.value}
+                value={inputValue}
+                onChange={(e): void => setInputValue(e.target.value)}
               />
             ) : (
               // TODO: Style the placeholder
@@ -63,7 +73,14 @@ const SelectInput = (props: SelectInputProps): React.ReactElement => {
             )}
           </div>
         </div>
-        <IGSIcon />
+        <IGSIcon
+          onClick={(e): void => {
+            e.stopPropagation();
+            props.onChange && props.onChange("");
+            toggleDropdown();
+          }}
+          type={props.searcheable ? "close" : isOpened ? "up" : "down"}
+        />
       </div>
 
       <div
@@ -72,7 +89,7 @@ const SelectInput = (props: SelectInputProps): React.ReactElement => {
           isOpened && "select-input-parent__dropdown--show"
         }`}
       >
-        {props.options?.map((o, i) => {
+        {filteredOptions?.map((o, i) => {
           return (
             <div
               key={i}
