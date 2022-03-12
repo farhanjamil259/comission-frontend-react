@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import IGSIcon from "../icon/IGSIcon";
+import IGSText from "../text/IGSText";
 
 export interface SelectOptions {
   label: string;
@@ -50,7 +51,9 @@ const SelectInput = (props: SelectInputProps): React.ReactElement => {
     <div className="select-input-parent">
       <div className="select-input" onClick={(): void => toggleDropdown()}>
         <div className="select-input__wrapper">
-          <label className="select-input__label">Sales Rep</label>
+          <IGSText type="label-medium" className="select-input__label">
+            Sales Rep
+          </IGSText>
           <div className="select-input__container">
             {props.searcheable && (
               <IGSIcon

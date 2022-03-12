@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IconTypes } from "../icon/Icons";
 import IGSIcon from "../icon/IGSIcon";
+import IGSText from "../text/IGSText";
 
 interface RadioOption {
   label: string;
@@ -33,12 +34,19 @@ const RadioInput = (props: RadioInputProps): React.ReactElement => {
               />
             )}
             <div className="radio-input__option">
-              <label className="radio-input__option--label">
+              <IGSText
+                className="radio-input__option--label"
+                type="label-large"
+              >
                 {option.label}
-              </label>
-              <label className="radio-input__option--text">
-                Nice to get started
-              </label>
+              </IGSText>
+
+              <IGSText
+                className="radio-input__option--text"
+                type="label-medium"
+              >
+                {option.label}
+              </IGSText>
             </div>
 
             {!props.icon && option.value === val && (

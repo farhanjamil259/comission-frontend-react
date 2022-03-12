@@ -1,6 +1,7 @@
 import React, { createRef, useEffect } from "react";
 import { IconTypes } from "../icon/Icons";
 import IGSIcon from "../icon/IGSIcon";
+import IGSText from "../text/IGSText";
 
 interface IData {
   key: string;
@@ -46,7 +47,9 @@ const IGSInput = (props: IIGSInputProps): React.ReactElement => {
     >
       {props.showIcon && <IGSIcon type={generateIcon(props.type)} />}
       <div className="igs-input__container">
-        <label className="igs-input__label">{props.label}</label>
+        <IGSText className="igs-input__label" type="label-medium">
+          {props.label}
+        </IGSText>
         <input
           value={props.value}
           onChange={props.onChange}
