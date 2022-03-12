@@ -23,7 +23,7 @@
     width: 100%;
 
     #{$parent}__label {
-      //TODO: find a better way to handle cursor
+      // TODO: find a better way to handle cursor
       cursor: text;
       color: $dark-200;
       font-weight: 500;
