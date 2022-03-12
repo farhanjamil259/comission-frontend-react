@@ -1,4 +1,5 @@
 import React from "react";
+import ActionLink from "../../components/button/ActionLink";
 import RadioInput from "../../components/inputs/RadioInput";
 
 const FarhanComponents = (): React.ReactElement => {
@@ -14,6 +15,11 @@ const FarhanComponents = (): React.ReactElement => {
           { label: "Val 2", value: "val2" },
         ]}
       />
+      <h1>Inputs</h1>
+      <h2>Radio</h2>
+
+      <h2>Action Link</h2>
+      <ActionLink text="Forgot password" />
     </div>
   );
 };

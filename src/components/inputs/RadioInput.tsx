@@ -32,11 +32,11 @@ const RadioInput = (props: RadioInputProps): React.ReactElement => {
                 className="radio-input__options--checked--icon"
               />
             )}
-            <div className="radio_input__option">
-              <label className="radio_input__option--label">
+            <div className="radio-input__option">
+              <label className="radio-input__option--label">
                 {option.label}
               </label>
-              <label className="radio_input__option--text">
+              <label className="radio-input__option--text">
                 Nice to get started
               </label>
             </div>
