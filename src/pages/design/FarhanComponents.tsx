@@ -1,6 +1,5 @@
 import React from "react";
 import ActionLink from "../../components/button/ActionLink";
-import CheckboxInput from "../../components/inputs/CheckboxInput";
 import RadioInput from "../../components/inputs/RadioInput";
 
 const FarhanComponents = (): React.ReactElement => {
@@ -23,7 +22,6 @@ const FarhanComponents = (): React.ReactElement => {
       <ActionLink text="Forgot password" />
 
       <h3>Checkbox</h3>
-      <CheckboxInput />
     </div>
   );
 };
