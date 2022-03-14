@@ -2,6 +2,16 @@ export const icons = {
   lock: "ant-design:lock-outlined",
   eye: "ant-design:eye-outlined",
   email: "clarity:email-line",
+  search: "ant-design:search-outlined",
+  right: "bi:arrow-right",
+  close: "ei:close",
+  down: "akar-icons:chevron-down",
+  up: "akar-icons:chevron-up",
+  tick: "akar-icons:circle-check-fill",
+  tick2: "bi:check",
+  dollar: "emojione-v1:heavy-dollar-sign",
+  calender: "uil:calender",
+  percent: "fa-solid:percent",
 };
 
 export type IconTypes = keyof typeof icons;
