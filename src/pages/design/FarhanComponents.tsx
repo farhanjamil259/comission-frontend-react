@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import ActionLink from "../../components/button/ActionLink";
+import CheckboxInput from "../../components/inputs/CheckboxInput";
 import RadioInput from "../../components/inputs/RadioInput";
+import CommisionCalculator from "../comissionCalculator/CommisionCalculator";
 
 const FarhanComponents = (): React.ReactElement => {
+  const [checked, setChecked] = useState(false);
+
   return (
     <div
       style={{
@@ -22,6 +26,13 @@ const FarhanComponents = (): React.ReactElement => {
       <ActionLink text="Forgot password" />
 
       <h3>Checkbox</h3>
+      <CheckboxInput
+        value={checked}
+        onChange={(e): void => setChecked(e)}
+        label="Test Label"
+      />
+
+      <CommisionCalculator />
     </div>
   );
 };
