@@ -1,101 +1,109 @@
-.boxarea .row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 4rem;
-  margin: 4rem 5rem;
+// .boxarea .row {
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   column-gap: 4rem;
+//   margin: 4rem 5rem;
 
-  &:nth-child(even) {
-    div {
-      &:after {
-        transform: translateY(-50%) rotate(180deg);
-        right: auto;
-        left: -66px;
-      }
-      &:nth-child(3) {
-        &::before {
-          content: "\2192";
-          position: absolute;
-          right: -66px;
-          top: 50%;
-          transform: translateY(-50%) rotate(180deg);
-          font-size: 67px;
-          color: #fff;
-        }
-      }
-      &:first-child {
-        &:after {
-          content: "";
-          background: #fff;
-          width: 64px;
-          height: 4px;
-        }
-        &::before {
-          content: "";
-          border-right: 4px solid #fff;
-          height: 329px;
-          position: absolute;
-          left: -66px;
-          top: 50%;
-        }
-      }
-    }
-  }
-  &:nth-child(odd) {
-    div {
-      &:nth-child(3) {
-        &:after {
-          content: "";
-          background: #fff;
-          width: 64px;
-          height: 2px;
-        }
-        &::before {
-          content: "";
-          border-right: 4px solid #fff;
-          height: 322px;
-          position: absolute;
-          right: -67px;
-          top: 50%;
-        }
-      }
-      &:first-child {
-        &::before {
-          content: "\2192";
-          position: absolute;
-          right: auto;
-          top: 50%;
-          transform: translateY(-50%);
-          font-size: 67px;
-          color: #fff;
-          left: -67px;
-        }
-      }
-    }
-  }
-  div {
-    border: 2px solid #fff;
-    text-align: center;
-    height: 256px;
-    border-radius: 5px;
-    position: relative;
+//   &:nth-child(even) {
+//     div {
+//       &::after {
+//         transform: translateY(-50%) rotate(180deg);
+//         right: auto;
+//         left: -66px;
+//       }
 
-    &::after {
-      content: "\2192";
-      position: absolute;
-      right: -66px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 67px;
-      color: #fff;
-    }
-  }
-  &:first-child {
-    div {
-      &:first-child {
-        &:before {
-          content: none;
-        }
-      }
-    }
-  }
-}
+//       &:nth-child(3) {
+//         &::before {
+//           content: "\2192";
+//           position: absolute;
+//           right: -66px;
+//           top: 50%;
+//           transform: translateY(-50%) rotate(180deg);
+//           font-size: 67px;
+//           color: #fff;
+//         }
+//       }
+
+//       &:first-child {
+//         &::after {
+//           content: "";
+//           background: #fff;
+//           width: 64px;
+//           height: 4px;
+//         }
+
+//         &::before {
+//           content: "";
+//           border-right: 4px solid #fff;
+//           height: 329px;
+//           position: absolute;
+//           left: -66px;
+//           top: 50%;
+//         }
+//       }
+//     }
+//   }
+
+//   &:nth-child(odd) {
+//     div {
+//       &:nth-child(3) {
+//         &::after {
+//           content: "";
+//           background: #fff;
+//           width: 64px;
+//           height: 2px;
+//         }
+
+//         &::before {
+//           content: "";
+//           border-right: 4px solid #fff;
+//           height: 322px;
+//           position: absolute;
+//           right: -67px;
+//           top: 50%;
+//         }
+//       }
+
+//       &:first-child {
+//         &::before {
+//           content: "\2192";
+//           position: absolute;
+//           right: auto;
+//           top: 50%;
+//           transform: translateY(-50%);
+//           font-size: 67px;
+//           color: #fff;
+//           left: -67px;
+//         }
+//       }
+//     }
+//   }
+
+//   div {
+//     border: 2px solid #fff;
+//     text-align: center;
+//     height: 256px;
+//     border-radius: 5px;
+//     position: relative;
+
+//     &::after {
+//       content: "\2192";
+//       position: absolute;
+//       right: -66px;
+//       top: 50%;
+//       transform: translateY(-50%);
+//       font-size: 67px;
+//       color: #fff;
+//     }
+//   }
+
+//   &:first-child {
+//     div {
+//       &:first-child {
+//         &::before {
+//           content: none;
+//         }
+//       }
+//     }
+//   }
+// }

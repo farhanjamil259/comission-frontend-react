@@ -4,13 +4,13 @@
   align-items: center;
   width: fit-content;
 
-  &:hover {
-    color: $primary-400;
-  }
-
   &,
   & > * {
     cursor: pointer;
+  }
+
+  &:hover {
+    color: $primary-400;
   }
 
   &__icon {
