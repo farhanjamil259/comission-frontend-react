@@ -31,11 +31,12 @@ const FarhanComponents = (): React.ReactElement => {
         margin: "30px",
       }}
     >
-      <Wizard>
+      <Wizard show title="asdasd">
         <form id="fid1">
           <input type="text" required />
         </form>
         <form id="fid2" ref={undefined}>
+          <input type="text" required />
           <input type="text" required />
         </form>
       </Wizard>
