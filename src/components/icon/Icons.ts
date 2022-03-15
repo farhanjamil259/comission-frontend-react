@@ -12,6 +12,7 @@ export const icons = {
   dollar: "emojione-v1:heavy-dollar-sign",
   calender: "uil:calender",
   percent: "fa-solid:percent",
+  left: "bi:arrow-left",
 };
 
 export type IconTypes = keyof typeof icons;
