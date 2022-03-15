@@ -74,15 +74,17 @@ const Wizard = (props: WizardType): React.ReactElement => {
             <IGSIcon type="left" className="wizard__footer--icon" />
             {props.cancelText || "Cancel"}
           </IGSText>
-          <Button
-            rounded
-            variant="primary"
-            text="Previous"
-            type="button"
-            onClick={(): void => {
-              handlePrevious();
-            }}
-          />
+          {currentChild !== 0 && (
+            <Button
+              rounded
+              variant="primary"
+              text="Previous"
+              type="button"
+              onClick={(): void => {
+                handlePrevious();
+              }}
+            />
+          )}
           <Button
             rounded
             form={props.children[currentChild].props.id}
