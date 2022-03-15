@@ -1,0 +1,25 @@
+.custom-form {
+  width: 400px;
+
+  &__title {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $light-100;
+    text-align: center;
+    margin: 0px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    color: $dark-200;
+    margin: 0px;
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  &__body {
+    margin-top: 20px;
+  }
+}

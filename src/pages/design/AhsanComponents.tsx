@@ -5,6 +5,7 @@ import SelectInput, {
   SelectOptions,
 } from "../../components/inputs/SelectInput";
 import Wizard from "../../components/wizards/Wizard";
+import EmployeeAddStepOne from "../EmployeeDashboard/components/employeeAdd/EmployeeAddStepOne";
 
 const options: SelectOptions[] = [
   {
@@ -24,20 +25,7 @@ const options: SelectOptions[] = [
 const AhsanComponents = (): React.ReactElement => {
   return (
     <Wizard>
-      <form id="create-employee-1">
-        <FormFlex column>
-          <FormFlex>
-            <IGSInput label="First Name" />
-            <IGSInput label="Last Name" />
-          </FormFlex>
-          <IGSInput
-            type="email"
-            label="Email Address"
-            placeholder="someone@example.com"
-          />
-          <IGSInput label="Business Address" />
-        </FormFlex>
-      </form>
+      <EmployeeAddStepOne />
       <form id="create-employee-2">
         <div></div>
       </form>
