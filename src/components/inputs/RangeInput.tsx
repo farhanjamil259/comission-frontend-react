@@ -4,12 +4,14 @@ import Slider, { Range } from "rc-slider";
 import "rc-slider/assets/index.css";
 
 type RangeInputProps = {
-  values?: number[];
-  onchange?: (e: number[]) => void;
+  rangeValues?: number[];
+  sliderValue?: number;
+  onchange?: (e: number[] | number) => void;
   min?: number;
   max?: number;
   step?: number;
   color?: "green" | "orange" | "blue";
+  type?: "range" | "slider";
 };
 
 const generateGradient = (color: RangeInputProps["color"]): string => {
@@ -32,34 +34,65 @@ const RangeInput = (props: RangeInputProps): React.ReactElement => {
     borderBottomRightRadius: "0",
   };
 
-  return (
-    <Range
-      dots
-      step={20}
-      trackStyle={[{ background: generateGradient(props.color), height: 10 }]}
-      railStyle={{
-        backgroundColor: "#555770",
-        height: "10px",
-        padding: "0",
-        margin: "0",
-      }}
-      handleStyle={[
-        { background: generateGradient(props.color), ...handleStyle },
-        { background: generateGradient(props.color), ...handleStyle },
-      ]}
-      dotStyle={{
-        borderRadius: 0,
-        backgroundColor: "#555770",
-        border: "none",
-        width: "2px",
-        top: "10px",
-      }}
-      // onChange={props.onchange}
-      // value={[2, 20]}
-      min={props.min}
-      max={props.max}
-    />
-  );
+  if (props.type === "range") {
+    return (
+      <Range
+        dots
+        step={20}
+        trackStyle={[{ background: generateGradient(props.color), height: 10 }]}
+        railStyle={{
+          backgroundColor: "#555770",
+          height: "10px",
+          padding: "0",
+          margin: "0",
+        }}
+        handleStyle={[
+          { background: generateGradient(props.color), ...handleStyle },
+          { background: generateGradient(props.color), ...handleStyle },
+        ]}
+        dotStyle={{
+          borderRadius: 0,
+          backgroundColor: "#555770",
+          border: "none",
+          width: "2px",
+          top: "10px",
+        }}
+        onChange={props.onchange}
+        value={props.rangeValues}
+        min={props.min}
+        max={props.max}
+      />
+    );
+  } else {
+    return (
+      <Slider
+        dots
+        step={20}
+        trackStyle={{ background: generateGradient(props.color), height: 10 }}
+        railStyle={{
+          backgroundColor: "#555770",
+          height: "10px",
+          padding: "0",
+          margin: "0",
+        }}
+        handleStyle={{
+          background: generateGradient(props.color),
+          ...handleStyle,
+        }}
+        dotStyle={{
+          borderRadius: 0,
+          backgroundColor: "#555770",
+          border: "none",
+          width: "2px",
+          top: "10px",
+        }}
+        onChange={props.onchange}
+        value={props.sliderValue}
+        min={props.min}
+        max={props.max}
+      />
+    );
+  }
 };
 
 export default RangeInput;
