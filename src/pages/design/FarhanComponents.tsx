@@ -1,11 +1,29 @@
-import React, { useState } from "react";
+import React, { createRef, useRef, useState } from "react";
 import ActionLink from "../../components/button/ActionLink";
 import CheckboxInput from "../../components/inputs/CheckboxInput";
 import RadioInput from "../../components/inputs/RadioInput";
+import Wizard from "../../components/wizards/Wizard";
 import CommisionCalculator from "../comissionCalculator/CommisionCalculator";
+
+import {
+  Formik,
+  FormikHelpers,
+  FormikProps,
+  Form,
+  Field,
+  FieldProps,
+} from "formik";
 
 const FarhanComponents = (): React.ReactElement => {
   const [checked, setChecked] = useState(false);
+
+  interface MyFormValues {
+    firstName: string;
+  }
+
+  const initialValues: MyFormValues = { firstName: "" };
+
+  const ref = createRef<HTMLFormElement>();
 
   return (
     <div
@@ -13,6 +31,18 @@ const FarhanComponents = (): React.ReactElement => {
         margin: "30px",
       }}
     >
+      <Wizard>
+        <form id="fid1">
+          <input type="text" required />
+        </form>
+        <form id="fid2" ref={undefined}>
+          <input type="text" required />
+        </form>
+      </Wizard>
+
+      <br />
+      <br />
+
       <h1>Inputs</h1>
       <h3>Radio</h3>
       <RadioInput
