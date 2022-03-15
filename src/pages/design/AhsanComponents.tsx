@@ -23,7 +23,7 @@ const options: SelectOptions[] = [
 
 const AhsanComponents = (): React.ReactElement => {
   return (
-    <Wizard>
+    <Wizard title="asdasd">
       <form id="create-employee-1">
         <FormFlex column>
           <FormFlex>
