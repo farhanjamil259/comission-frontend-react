@@ -13,6 +13,7 @@ import {
   Field,
   FieldProps,
 } from "formik";
+import RangeInput from "../../components/inputs/RangeInput";
 
 const FarhanComponents = (): React.ReactElement => {
   const [checked, setChecked] = useState(false);
@@ -31,7 +32,8 @@ const FarhanComponents = (): React.ReactElement => {
         margin: "30px",
       }}
     >
-      <Wizard show title="asdasd">
+      <RangeInput />
+      <Wizard title="asdasd">
         <form id="fid1">
           <input type="text" required />
         </form>
