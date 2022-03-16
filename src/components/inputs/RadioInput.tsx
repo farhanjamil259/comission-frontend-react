@@ -9,7 +9,7 @@ interface RadioOption {
 }
 
 type RadioInputProps = {
-  options: [RadioOption, RadioOption];
+  options: RadioOption[];
   icon?: IconTypes;
 };
 
@@ -45,7 +45,7 @@ const RadioInput = (props: RadioInputProps): React.ReactElement => {
                 className="radio-input__option--text"
                 type="label-medium"
               >
-                {option.label}
+                {option.value}
               </IGSText>
             </div>
 

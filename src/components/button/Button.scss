@@ -14,11 +14,25 @@
   border-radius: 8px;
 
   &--success {
-    background: $gradient-01;
+    background: $gradient-04;
   }
 
   &--primary {
     background: $gradient-07;
+  }
+
+  &--dark {
+    background: $dark-400;
+    color: $dark-200;
+
+    &:hover {
+      background: $dark-300;
+      color: $dark-100;
+    }
+  }
+
+  &--danger {
+    background: $gradient-02;
   }
 
   &--rounded {

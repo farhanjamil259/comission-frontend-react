@@ -1,15 +1,13 @@
 .radio-input {
   $parent: &;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  height: 100px;
+  gap: 10px;
 
   &__options {
     display: flex;
     align-items: center;
-    padding: 12px;
+    padding: 13px 13px 13px 0px;
     background-color: $dark-400;
     border-radius: 8px;
     border: 2px solid $dark-300;

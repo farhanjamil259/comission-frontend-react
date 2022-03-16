@@ -5,7 +5,7 @@ import SelectInput, {
   SelectOptions,
 } from "../../components/inputs/SelectInput";
 import Wizard from "../../components/wizards/Wizard";
-import EmployeeAddStepOne from "../EmployeeDashboard/components/employeeAdd/EmployeeAddStepOne";
+import EmployeeAddStepOne from "../EmployeeDashboard/components/employeeAdd/EmployeeAddStepTwo";
 
 const options: SelectOptions[] = [
   {
