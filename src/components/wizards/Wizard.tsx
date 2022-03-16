@@ -86,7 +86,7 @@ const Wizard = (props: WizardType): React.ReactElement => {
           {currentChild !== 0 && (
             <Button
               rounded
-              variant="primary"
+              variant="dark"
               text="Previous"
               type="button"
               onClick={(): void => {
@@ -97,8 +97,15 @@ const Wizard = (props: WizardType): React.ReactElement => {
           <Button
             rounded
             form={props.children[currentChild].props.id}
-            variant="success"
-            text="Next"
+            // TODO: move to alert component
+            onClick={(): void => {
+              if (!props.children[currentChild].props.id)
+                throw new Error("No child id in wizard");
+            }}
+            variant={
+              currentChild == props.children.length - 1 ? "success" : "primary"
+            }
+            text={currentChild == props.children.length - 1 ? "Finish" : "Next"}
             type="submit"
           />
         </div>

@@ -47,9 +47,18 @@ const SelectInput = (props: SelectInputProps): React.ReactElement => {
     isOpened ? setIsOpened(false) : setIsOpened(true);
   };
 
+  const inputRef = useRef<HTMLInputElement>(null);
+
   return (
     <div className="select-input-parent">
-      <div className="select-input" onClick={(): void => toggleDropdown()}>
+      <div
+        className="select-input"
+        onClick={(): void => {
+          if (!inputRef.current) return;
+          inputRef.current.focus();
+          toggleDropdown();
+        }}
+      >
         <div className="select-input__wrapper">
           <IGSText type="label-medium" className="select-input__label">
             Sales Rep
@@ -65,6 +74,7 @@ const SelectInput = (props: SelectInputProps): React.ReactElement => {
             )}
             {props.searcheable ? (
               <input
+                ref={inputRef}
                 type="text"
                 className="select-input__field"
                 value={inputValue}
@@ -102,6 +112,7 @@ const SelectInput = (props: SelectInputProps): React.ReactElement => {
               }}
               className="select-input-parent__dropdown--item"
             >
+              {/* TODO: make right icon change able. and remove search icon */}
               <IGSIcon
                 className="select-input-parent__dropdown--icon"
                 width="16px"

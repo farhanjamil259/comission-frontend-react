@@ -3,9 +3,13 @@ import CustomForm from "../../../../components/form/CustomForm";
 import FormFlex from "../../../../components/form/FormFlex";
 import IGSInput from "../../../../components/inputs/IGSInput";
 
-const EmployeeAddStepOne = (): React.ReactElement => {
+type CustomFormProps = {
+  id: string;
+};
+
+const EmployeeAddStepOne = (props: CustomFormProps): React.ReactElement => {
   return (
-    <CustomForm id="employee-add-step1" title="General Info">
+    <CustomForm id={props.id} title="General Info">
       <FormFlex column>
         <FormFlex>
           <IGSInput label="First Name" />

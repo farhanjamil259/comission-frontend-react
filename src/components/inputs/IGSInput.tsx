@@ -79,9 +79,6 @@ const IGSInput = (props: IIGSInputProps): React.ReactElement => {
       {props.type === "calendar-day" && (
         <IGSIcon className={postIconClass} type="calender" />
       )}
-      {props.type === "calendar-day" && (
-        <IGSIcon className={postIconClass} type="calender" />
-      )}
       {props.type === "rate" && (
         <IGSIcon className={postIconClass} type="percent" />
       )}

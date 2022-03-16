@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string;
-  variant?: "success" | "primary";
+  variant?: "success" | "primary" | "dark" | "danger";
   rounded?: boolean;
 }
 
