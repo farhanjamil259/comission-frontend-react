@@ -14,7 +14,11 @@ const FormFlex = (props: FormFlexProps): React.ReactElement => {
     },
   ];
   const className = classNames(coreClass, directionClasses);
-  return <div className={className}>{props.children}</div>;
+  return (
+    <div className={className} style={{ width: "100%" }}>
+      {props.children}
+    </div>
+  );
 };
 
 export default FormFlex;
