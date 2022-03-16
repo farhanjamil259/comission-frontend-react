@@ -16,6 +16,20 @@
     border: 2px solid $primary-400;
   }
 
+  &--underline {
+    border-radius: 0;
+    border-width: 0;
+    border-bottom-width: 2px;
+    padding: 13px 0;
+    background: transparent;
+  }
+
+  &--underline:focus-within {
+    border-radius: 0;
+    border-width: 0;
+    border-bottom-width: 2px;
+  }
+
   &__container {
     display: flex;
     justify-content: between;
