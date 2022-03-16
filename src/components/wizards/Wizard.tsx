@@ -17,6 +17,11 @@ const Wizard = (props: WizardType): React.ReactElement => {
 
   const [currentChild, setCurrentChild] = useState(0);
 
+  useEffect(() => {
+    setStep(Math.round(100 / props.children.length));
+    setCurrentChild(0);
+  }, [props.show]);
+
   const handleSubmit = (): void => {
     if (currentChild === props.children.length - 1) {
       console.log("Last Step");
@@ -70,7 +75,11 @@ const Wizard = (props: WizardType): React.ReactElement => {
         <div className="wizard__child">{props.children[currentChild]}</div>
 
         <div className="wizard__footer">
-          <IGSText className="wizard__footer--text" type="stylize-lead">
+          <IGSText
+            className="wizard__footer--text"
+            type="stylize-lead"
+            onClick={props.onCancel}
+          >
             <IGSIcon type="left" className="wizard__footer--icon" />
             {props.cancelText || "Cancel"}
           </IGSText>
@@ -96,6 +105,15 @@ const Wizard = (props: WizardType): React.ReactElement => {
       </div>
     </div>
   );
+};
+
+type WizardItemProps = {
+  id: string;
+  children?: React.ReactElement | React.ReactElement[];
+};
+
+export const WizardItem = (props: WizardItemProps): React.ReactElement => {
+  return <form id={props.id}>{props.children}</form>;
 };
 
 export default Wizard;
