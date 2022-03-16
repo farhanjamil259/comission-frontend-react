@@ -9,10 +9,13 @@ export const icons = {
   up: "akar-icons:chevron-up",
   tick: "akar-icons:circle-check-fill",
   tick2: "bi:check",
+  tick3: "charm:tick",
   dollar: "emojione-v1:heavy-dollar-sign",
   calender: "uil:calender",
   percent: "fa-solid:percent",
   left: "bi:arrow-left",
+  setting: "ci:settings",
+  user: "fa-regular:user",
 };
 
 export type IconTypes = keyof typeof icons;

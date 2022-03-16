@@ -5,15 +5,8 @@ import RadioInput from "../../components/inputs/RadioInput";
 import Wizard from "../../components/wizards/Wizard";
 import CommisionCalculator from "../comissionCalculator/CommisionCalculator";
 
-import {
-  Formik,
-  FormikHelpers,
-  FormikProps,
-  Form,
-  Field,
-  FieldProps,
-} from "formik";
 import RangeInput from "../../components/inputs/RangeInput";
+import Steps from "../../components/wizards/components/Steps";
 
 const FarhanComponents = (): React.ReactElement => {
   const [checked, setChecked] = useState(false);
@@ -32,6 +25,7 @@ const FarhanComponents = (): React.ReactElement => {
         margin: "30px",
       }}
     >
+      <Steps />
       <RangeInput />
       <Wizard title="asdasd">
         <form id="fid1">
