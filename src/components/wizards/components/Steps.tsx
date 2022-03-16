@@ -1,30 +1,45 @@
 import React from "react";
+import { IconTypes } from "../../icon/Icons";
 import IGSIcon from "../../icon/IGSIcon";
 
-const Steps = (): React.ReactElement => {
+export interface Step {
+  icon: IconTypes;
+  label: string;
+}
+
+type StepsProps = {
+  options?: Step[];
+};
+
+const Steps = (props: StepsProps): React.ReactElement => {
   return (
     <div className="steps">
       <section className="step-indicator">
-        <div className="step step1 active">
-          <div className="step-icon ">
-            <IGSIcon type="user" />
-          </div>
-          <p className="step-text">Delivery</p>
-        </div>
-        <div className="indicator-line active"></div>
-        <div className="step step2 active">
-          <div className="step-icon ">
-            <IGSIcon type="setting" />
-          </div>
-          <p className="step-text">Payment</p>
-        </div>
-        <div className="indicator-line "></div>
-        <div className="step step3 ">
-          <div className="step-icon">
-            <IGSIcon type="tick3" />
-          </div>
-          <p className="step-text">Confirmation</p>
-        </div>
+        {props.options?.map((option, optionIndex) => {
+          if (!props.options) return;
+          if (optionIndex === props.options?.length - 1) {
+            return (
+              <div className="step  active">
+                <div className="step-icon ">
+                  <IGSIcon type={option.icon} />
+                </div>
+                <p className="step-text">{option.label}</p>
+              </div>
+            );
+          }
+          return (
+            <React.Fragment key={optionIndex + "StepIndex"}>
+              <div className="step  active">
+                <div className="step-icon ">
+                  <IGSIcon type={option.icon} />
+                </div>
+                <p className="step-text">{option.label}</p>
+              </div>
+
+              <div className="indicator-line active"></div>
+            </React.Fragment>
+          );
+        })}
       </section>
     </div>
   );
