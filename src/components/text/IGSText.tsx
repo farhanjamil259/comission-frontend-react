@@ -20,7 +20,8 @@ interface TextProps extends React.HTMLAttributes<HTMLElement> {
     | "stylize-blockquote"
     | "stylize-lead"
     | "stylize-small"
-    | "stylize-tiny";
+    | "stylize-tiny"
+    | "p";
 }
 
 const generateTag = (type: TextProps["type"]): string => {
@@ -43,6 +44,8 @@ const generateTag = (type: TextProps["type"]): string => {
       return "label";
     case "stylize-blockquote":
       return "blockquote";
+    case "p":
+      return "p";
     default:
       return "p";
   }

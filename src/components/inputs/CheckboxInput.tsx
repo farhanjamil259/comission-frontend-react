@@ -4,7 +4,7 @@ import IGSIcon from "../icon/IGSIcon";
 import IGSText from "../text/IGSText";
 
 type CheckboxInputProps = {
-  value: boolean;
+  value?: boolean;
   label?: string;
   onChange?: (value: boolean) => void;
   disabled?: boolean;

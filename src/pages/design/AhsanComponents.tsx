@@ -24,12 +24,17 @@ const options: SelectOptions[] = [
 
 const AhsanComponents = (): React.ReactElement => {
   return (
-    <Wizard title="asdasd">
-      <EmployeeAddStepOne />
-      <form id="create-employee-2">
-        <div></div>
-      </form>
-    </Wizard>
+    <form>
+      <FormFlex column>
+        <IGSInput type="email" label="Email Address" underline showIcon />
+      </FormFlex>
+    </form>
+    // <Wizard title="asdasd">
+    //   <EmployeeAddStepOne />
+    //   <form id="create-employee-2">
+    //     <div></div>
+    //   </form>
+    // </Wizard>
   );
 };
 
