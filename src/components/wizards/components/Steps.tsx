@@ -8,7 +8,8 @@ export interface Step {
 }
 
 type StepsProps = {
-  options?: Step[];
+  options: Step[];
+  currentStep: number;
 };
 
 const Steps = (props: StepsProps): React.ReactElement => {
@@ -19,7 +20,11 @@ const Steps = (props: StepsProps): React.ReactElement => {
           if (!props.options) return;
           if (optionIndex === props.options?.length - 1) {
             return (
-              <div className="step  active">
+              <div
+                className={`step ${
+                  optionIndex <= props.currentStep ? "  active" : ""
+                }`}
+              >
                 <div className="step-icon ">
                   <IGSIcon type={option.icon} />
                 </div>
@@ -29,14 +34,22 @@ const Steps = (props: StepsProps): React.ReactElement => {
           }
           return (
             <React.Fragment key={optionIndex + "StepIndex"}>
-              <div className="step  active">
+              <div
+                className={`step ${
+                  optionIndex <= props.currentStep ? "  active" : ""
+                }`}
+              >
                 <div className="step-icon ">
                   <IGSIcon type={option.icon} />
                 </div>
                 <p className="step-text">{option.label}</p>
               </div>
 
-              <div className="indicator-line active"></div>
+              <div
+                className={`indicator-line ${
+                  optionIndex <= props.currentStep - 1 ? "  active" : ""
+                }`}
+              ></div>
             </React.Fragment>
           );
         })}

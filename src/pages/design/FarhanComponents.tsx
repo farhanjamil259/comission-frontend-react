@@ -48,7 +48,7 @@ const FarhanComponents = (): React.ReactElement => {
         margin: "30px",
       }}
     >
-      <Steps options={stepOptions} />
+      <Steps options={stepOptions} currentStep={2} />
       <RangeInput />
       <Wizard title="asdasd">
         <form id="fid1">
