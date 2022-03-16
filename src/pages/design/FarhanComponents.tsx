@@ -7,6 +7,7 @@ import CommisionCalculator from "../comissionCalculator/CommisionCalculator";
 
 import RangeInput from "../../components/inputs/RangeInput";
 import Steps, { Step } from "../../components/wizards/components/Steps";
+import Logo from "../../components/logo/Logo";
 
 const FarhanComponents = (): React.ReactElement => {
   const [checked, setChecked] = useState(false);
@@ -48,41 +49,10 @@ const FarhanComponents = (): React.ReactElement => {
         margin: "30px",
       }}
     >
-      <Steps options={stepOptions} currentStep={2} />
-      <RangeInput />
-      <Wizard title="asdasd">
-        <form id="fid1">
-          <input type="text" required />
-        </form>
-        <form id="fid2" ref={undefined}>
-          <input type="text" required />
-          <input type="text" required />
-        </form>
-      </Wizard>
-
-      <br />
-      <br />
-
-      <h1>Inputs</h1>
-      <h3>Radio</h3>
-      <RadioInput
-        options={[
-          { label: "Val 1", value: "val1" },
-          { label: "Val 2", value: "val2" },
-        ]}
-      />
-
-      <h3>Action Link</h3>
-      <ActionLink text="Forgot password" />
-
-      <h3>Checkbox</h3>
-      <CheckboxInput
-        value={checked}
-        onChange={(e): void => setChecked(e)}
-        label="Test Label"
-      />
-
-      <CommisionCalculator />
+      <Logo size="small" />
+      <Logo size="medium" />
+      <Logo />
+      <Logo size="large" />
     </div>
   );
 };
