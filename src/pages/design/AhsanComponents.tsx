@@ -1,6 +1,7 @@
 import React from "react";
-import FormFlex from "../../components/form/FormFlex";
+import XFlex from "../../components/form/FormFlex";
 import IGSInput from "../../components/inputs/IGSInput";
+import RangeInput from "../../components/inputs/RangeInput";
 import SelectInput, {
   SelectOptions,
 } from "../../components/inputs/SelectInput";
@@ -24,10 +25,10 @@ const options: SelectOptions[] = [
 
 const AhsanComponents = (): React.ReactElement => {
   return (
-    <form>
-      <FormFlex column>
+    <form style={{ padding: "50px" }}>
+      <XFlex column>
         <IGSInput type="email" label="Email Address" underline showIcon />
-      </FormFlex>
+      </XFlex>
     </form>
     // <Wizard title="asdasd">
     //   <EmployeeAddStepOne />

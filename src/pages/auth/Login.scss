@@ -3,11 +3,21 @@
   grid-template-columns: 1fr 600px;
   height: 100vh;
 
+  &__logo {
+    margin-bottom: 32px;
+  }
   &-section-left,
   &-section-right {
     display: flex;
-    align-items: center;
+
     justify-content: center;
+  }
+  &-section-left {
+    align-items: center;
+  }
+  &-section-right {
+    padding: 0 64px;
+    flex-direction: column;
   }
 
   &-section-left {

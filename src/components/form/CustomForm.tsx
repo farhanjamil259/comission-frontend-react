@@ -1,5 +1,5 @@
-import classNames from "classnames";
 import React from "react";
+import { TypoText } from "../typography/XText";
 
 type CustomFormProps = {
   id: string;
@@ -12,20 +12,26 @@ type CustomFormProps = {
 const CustomForm = (props: CustomFormProps): React.ReactElement => {
   const coreClass = "custom-form";
   const bodyClass = `${coreClass}__body`;
-  const titleClass = classNames(`${coreClass}__title`, [
-    {
-      [`${coreClass}__text-left`]: props.textLeft,
-    },
-  ]);
-  const subtitleClass = classNames(`${coreClass}__subtitle`, [
-    {
-      [`${coreClass}__text-left`]: props.textLeft,
-    },
-  ]);
   return (
     <form id={props.id} className={coreClass}>
-      <h1 className={titleClass}>{props.title}</h1>
-      {props.subtitle && <h6 className={subtitleClass}>{props.subtitle}</h6>}
+      <TypoText
+        size="blockquote"
+        align={props.textLeft ? "left" : "center"}
+        weight="bold"
+        transform="uppercase"
+      >
+        {props.title}
+      </TypoText>
+      {props.subtitle && (
+        <TypoText
+          size="lead"
+          align={props.textLeft ? "left" : "center"}
+          weight="medium"
+          color="dark-200"
+        >
+          {props.subtitle}
+        </TypoText>
+      )}
       <div className={bodyClass}>{props.children}</div>
     </form>
   );

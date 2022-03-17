@@ -2,23 +2,28 @@ import React from "react";
 import ActionLink from "../../components/button/ActionLink";
 import Button from "../../components/button/Button";
 import CustomForm from "../../components/form/CustomForm";
-import FormFlex from "../../components/form/FormFlex";
-import CheckboxInput from "../../components/inputs/CheckboxInput";
+import XFlex from "../../components/form/FormFlex";
+import Checkbox from "../../components/inputs/CheckboxInput";
 import IGSInput from "../../components/inputs/IGSInput";
+import Logo from "../../components/logo/Logo";
 import IGSText from "../../components/text/IGSText";
+import { TypoText } from "../../components/typography/XText";
 
 const Login = (): React.ReactElement => {
   return (
     <div className="login-page">
       <div className="login-page-section-left">IMAGE</div>
       <div className="login-page-section-right">
+        <div className="register__logo">
+          <Logo size="medium" />
+        </div>
         <CustomForm
           textLeft
           id="login-form"
           title="Welcome Back"
           subtitle="We are excited to see you again!"
         >
-          <FormFlex column>
+          <XFlex column>
             <IGSInput
               type="email"
               label="Email Address"
@@ -31,19 +36,19 @@ const Login = (): React.ReactElement => {
               showIcon
               placeholder="secret"
             />
-            <FormFlex>
-              <CheckboxInput label="Remeber Me" value={true} />
+            <XFlex>
+              <Checkbox label="Remeber Me" value={true} />
               <ActionLink text="Forgot Password?" />
-            </FormFlex>
+            </XFlex>
             <br />
-            <FormFlex>
+            <XFlex>
               <Button text="Login" variant="primary" rounded />
               <div>
-                <IGSText type="label-medium">Do not have an account.</IGSText>
+                <TypoText size="small">Do not have an account.</TypoText>
                 <ActionLink text="Create Account" />
               </div>
-            </FormFlex>
-          </FormFlex>
+            </XFlex>
+          </XFlex>
         </CustomForm>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import CustomForm from "../../../../components/form/CustomForm";
-import FormFlex from "../../../../components/form/FormFlex";
+import XFlex from "../../../../components/form/FormFlex";
 import IGSInput from "../../../../components/inputs/IGSInput";
 
 type CustomFormProps = {
@@ -10,16 +10,16 @@ type CustomFormProps = {
 const EmployeeAddStepOne = (props: CustomFormProps): React.ReactElement => {
   return (
     <CustomForm id={props.id} title="General Info">
-      <FormFlex column>
-        <FormFlex>
+      <XFlex column>
+        <XFlex>
           <IGSInput label="First Name" />
           <IGSInput label="Last Name" />
-        </FormFlex>
+        </XFlex>
         <IGSInput type="email" label="Email Address" />
         <IGSInput type="phone" label="Phone" />
         <IGSInput type="ssn" label="SSN" />
         <IGSInput type="text" label="Address" />
-      </FormFlex>
+      </XFlex>
     </CustomForm>
   );
 };

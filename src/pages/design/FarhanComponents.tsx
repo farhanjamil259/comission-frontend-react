@@ -1,6 +1,6 @@
 import React, { createRef, useRef, useState } from "react";
 import ActionLink from "../../components/button/ActionLink";
-import CheckboxInput from "../../components/inputs/CheckboxInput";
+import Checkbox from "../../components/inputs/CheckboxInput";
 import RadioInput from "../../components/inputs/RadioInput";
 import Wizard from "../../components/wizards/Wizard";
 import CommisionCalculator from "../comissionCalculator/CommisionCalculator";

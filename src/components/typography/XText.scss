@@ -1,0 +1,116 @@
+.igs-text {
+  &--light-100 {
+    color: $light-100;
+  }
+  &--light-200 {
+    color: $light-200;
+  }
+  &--light-300 {
+    color: $light-300;
+  }
+  &--light-400 {
+    color: $light-400;
+  }
+  &--light-500 {
+    color: $light-500;
+  }
+  &--dark-100 {
+    color: $dark-100;
+  }
+  &--dark-200 {
+    color: $dark-200;
+  }
+  &--dark-300 {
+    color: $dark-300;
+  }
+  &--dark-400 {
+    color: $dark-400;
+  }
+  &--dark-500 {
+    color: $dark-500;
+  }
+  &--regular {
+    font-weight: 300;
+  }
+  &--medium {
+    font-weight: 500;
+  }
+  &--bold {
+    font-weight: 700;
+  }
+  &--tiny {
+    font-size: 10px;
+  }
+  &--small {
+    font-size: 12px;
+  }
+  &--lead {
+    font-size: 14px;
+  }
+  &--large {
+    font-size: 16px;
+  }
+  &--blockquote {
+    font-size: 20px;
+  }
+  &--big {
+    font-size: 56px;
+  }
+  &--giant {
+    font-size: 64px;
+  }
+  &--h1 {
+    font-size: 40px;
+  }
+  &--h2 {
+    font-size: 32px;
+  }
+  &--h3 {
+    font-size: 28px;
+  }
+  &--h4 {
+    font-size: 24px;
+  }
+  &--h5 {
+    font-size: 20px;
+  }
+  &--h6 {
+    font-size: 16px;
+  }
+  &--uppercase {
+    text-transform: uppercase;
+  }
+  &--capitalize {
+    text-transform: capitalize;
+  }
+  &--lowercase {
+    text-transform: lowercase;
+  }
+  &--left {
+    text-align: left;
+  }
+  &--right {
+    text-align: right;
+  }
+  &--center {
+    text-align: center;
+  }
+  &--justify {
+    text-align: justify;
+  }
+  &--mb-small {
+    margin-bottom: 4px;
+  }
+  &--mb-medium {
+    margin-bottom: 8px;
+  }
+  &--mb-large {
+    margin-bottom: 16px;
+  }
+  &--mb-big {
+    margin-bottom: 32px;
+  }
+  &--mb-giant {
+    margin-bottom: 40px;
+  }
+}
