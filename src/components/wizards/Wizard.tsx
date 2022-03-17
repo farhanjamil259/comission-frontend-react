@@ -1,4 +1,4 @@
-import React, { Children, createRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../button/Button";
 import IGSIcon from "../icon/IGSIcon";
 import IGSText from "../text/IGSText";
