@@ -13,29 +13,29 @@ type WizardType = {
 };
 
 const Wizard = (props: WizardType): React.ReactElement => {
-  const [step, setStep] = useState(Math.round(100 / props.children.length));
+  const calculatedStep = Math.ceil(100 / props.children.length);
+  const [step, setStep] = useState(calculatedStep);
 
   const [currentChild, setCurrentChild] = useState(0);
 
   useEffect(() => {
-    setStep(Math.round(100 / props.children.length));
+    setStep(calculatedStep);
     setCurrentChild(0);
   }, [props.show]);
 
   const handleSubmit = (): void => {
+    setStep(step + calculatedStep);
     if (currentChild === props.children.length - 1) {
-      console.log("Last Step");
       props.onSubmit && props.onSubmit();
       return;
     }
     setCurrentChild(currentChild + 1);
-    setStep(step + Math.round(100 / props.children.length));
   };
 
   const handlePrevious = (): void => {
     if (currentChild === 0) return;
     setCurrentChild(currentChild - 1);
-    setStep(step - Math.round(100 / props.children.length));
+    setStep(step - calculatedStep);
   };
 
   useEffect(() => {
