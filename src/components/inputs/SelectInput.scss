@@ -84,12 +84,8 @@
       display: block;
     }
 
-    &--item:first-child {
-      padding-top: 0;
-    }
-
     &--item {
-      padding: 0 13px 4px 13px;
+      padding: 0 13px 4px;
       display: flex;
       align-items: center;
       font-size: 14px;
@@ -98,14 +94,10 @@
         color: $dark-100;
         cursor: pointer;
       }
+    }
 
-      &:first-child {
-        // margin-top: 11px;
-      }
-
-      &:last-child {
-        // margin-bottom: 11px;
-      }
+    &--item:first-child {
+      padding-top: 0;
     }
 
     &--icon {

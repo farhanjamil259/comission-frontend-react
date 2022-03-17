@@ -2,22 +2,26 @@ import React from "react";
 import Slider, { Range } from "rc-slider";
 
 import "rc-slider/assets/index.css";
+import { TypoText } from "../typography/XText";
 
 type RangeInputProps = {
   rangeValues?: number[];
   sliderValue?: number;
-  onchange?: (e: number[] | number) => void;
+  onChange?: (e: number[] | number) => void;
   min?: number;
   max?: number;
   step?: number;
-  color?: "green" | "orange" | "blue";
+  color?: "success" | "danger" | "primary";
   type?: "range" | "slider";
+  small?: boolean;
+  noHandle?: boolean;
+  marks?: {};
 };
 
 const generateGradient = (color: RangeInputProps["color"]): string => {
-  if (color === "green")
+  if (color === "success")
     return "linear-gradient(147.14deg, #00cfde 6.95%, #05a660 93.05%)";
-  if (color === "orange")
+  if (color === "danger")
     return "linear-gradient(147.14deg, #f80 6.95%, #e63535 93.05%)";
   return "linear-gradient(147.14deg, #73dfe7 6.95%, #0063f7 93.05%)";
 };
@@ -26,71 +30,89 @@ const RangeInput = (props: RangeInputProps): React.ReactElement => {
   const handleStyle: React.CSSProperties = {
     width: "20px",
     height: "20px",
-    borderRadius: "2rem",
+    borderRadius: "100",
     border: "none",
     position: "absolute",
+    zIndex: "3",
     top: "-20px",
     marginLeft: "-10px",
     borderBottomRightRadius: "0",
+    display: props.noHandle ? "none" : "block",
   };
 
   if (props.type === "range") {
     return (
-      <Range
-        dots
-        step={20}
-        trackStyle={[{ background: generateGradient(props.color), height: 10 }]}
-        railStyle={{
-          backgroundColor: "#555770",
-          height: "10px",
-          padding: "0",
-          margin: "0",
-        }}
-        handleStyle={[
-          { background: generateGradient(props.color), ...handleStyle },
-          { background: generateGradient(props.color), ...handleStyle },
-        ]}
-        dotStyle={{
-          borderRadius: 0,
-          backgroundColor: "#555770",
-          border: "none",
-          width: "2px",
-          top: "10px",
-        }}
-        onChange={props.onchange}
-        value={props.rangeValues}
-        min={props.min}
-        max={props.max}
-      />
+      <div className="igs-range">
+        <Range
+          marks={props.marks}
+          step={props.step}
+          trackStyle={[
+            {
+              background: generateGradient(props.color),
+              height: props.small ? 5 : 10,
+              borderRadius: "0",
+            },
+          ]}
+          railStyle={{
+            backgroundColor: "#555770",
+            height: props.small ? "5px" : "10px",
+            borderRadius: "0px",
+          }}
+          handleStyle={[
+            { background: generateGradient(props.color), ...handleStyle },
+            { background: generateGradient(props.color), ...handleStyle },
+          ]}
+          dotStyle={{
+            display: "none",
+            // borderRadius: 0,
+            // backgroundColor: "#555770",
+            // border: "none",
+            // width: "1px",
+            // top: props.small ? "4px" : "8px",
+            // marginLeft: "0px",
+          }}
+          onChange={props.onChange}
+          value={props.rangeValues}
+          min={props.min}
+          max={props.max}
+        />
+      </div>
     );
   } else {
     return (
-      <Slider
-        dots
-        step={20}
-        trackStyle={{ background: generateGradient(props.color), height: 10 }}
-        railStyle={{
-          backgroundColor: "#555770",
-          height: "10px",
-          padding: "0",
-          margin: "0",
-        }}
-        handleStyle={{
-          background: generateGradient(props.color),
-          ...handleStyle,
-        }}
-        dotStyle={{
-          borderRadius: 0,
-          backgroundColor: "#555770",
-          border: "none",
-          width: "2px",
-          top: "10px",
-        }}
-        onChange={props.onchange}
-        value={props.sliderValue}
-        min={props.min}
-        max={props.max}
-      />
+      <div className="igs-range">
+        <Slider
+          marks={props.marks}
+          step={props.step}
+          trackStyle={{
+            background: generateGradient(props.color),
+            height: props.small ? 5 : 10,
+            borderRadius: "0",
+          }}
+          railStyle={{
+            backgroundColor: "#555770",
+            height: props.small ? "5px" : "10px",
+            borderRadius: "0px",
+          }}
+          handleStyle={{
+            background: generateGradient(props.color),
+            ...handleStyle,
+          }}
+          dotStyle={{
+            display: "none",
+            // borderRadius: 0,
+            // backgroundColor: "#555770",
+            // border: "none",
+            // width: "1px",
+            // top: props.small ? "4px" : "8px",
+            // marginLeft: "0px",
+          }}
+          onChange={props.onChange}
+          value={props.sliderValue}
+          min={props.min}
+          max={props.max}
+        />
+      </div>
     );
   }
 };

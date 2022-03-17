@@ -1,6 +1,6 @@
 import React from "react";
 import CustomForm from "../../../../components/form/CustomForm";
-import FormFlex from "../../../../components/form/FormFlex";
+import XFlex from "../../../../components/form/FormFlex";
 import IGSInput from "../../../../components/inputs/IGSInput";
 import RadioInput from "../../../../components/inputs/RadioInput";
 import SelectInput from "../../../../components/inputs/SelectInput";
@@ -31,10 +31,10 @@ const EmployeeAddStepTwo = (props: CustomFormProps): React.ReactElement => {
   ];
   return (
     <CustomForm id={props.id} title="Select Role">
-      <FormFlex column>
+      <XFlex column>
         <RadioInput options={radioOptions} />
-        <SelectInput searcheable options={searchOptions} />
-      </FormFlex>
+        <SelectInput label="Assign Team" searcheable options={searchOptions} />
+      </XFlex>
     </CustomForm>
   );
 };

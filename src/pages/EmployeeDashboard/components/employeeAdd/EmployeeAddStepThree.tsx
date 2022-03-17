@@ -1,6 +1,6 @@
 import React from "react";
 import CustomForm from "../../../../components/form/CustomForm";
-import FormFlex from "../../../../components/form/FormFlex";
+import XFlex from "../../../../components/form/FormFlex";
 import IGSInput from "../../../../components/inputs/IGSInput";
 import RadioInput from "../../../../components/inputs/RadioInput";
 
@@ -21,12 +21,12 @@ const EmployeeAddStepThree = (props: CustomFormProps): React.ReactElement => {
   ];
   return (
     <CustomForm id={props.id} title="Payroll Account">
-      <FormFlex column>
+      <XFlex column>
         <RadioInput options={radioOptions} />
         <IGSInput type="currency" label="Amount" />
         <IGSInput type="calendar-day" label="Pay Day" />
         <IGSInput type="currency" label="Reserve Limit" />
-      </FormFlex>
+      </XFlex>
     </CustomForm>
   );
 };

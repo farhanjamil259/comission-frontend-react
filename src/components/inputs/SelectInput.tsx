@@ -8,6 +8,7 @@ export interface SelectOptions {
 }
 
 type SelectInputProps = {
+  label: string;
   searcheable?: boolean;
   onChange?: (value: string) => void;
   value?: string;
@@ -61,7 +62,7 @@ const SelectInput = (props: SelectInputProps): React.ReactElement => {
       >
         <div className="select-input__wrapper">
           <IGSText type="label-medium" className="select-input__label">
-            Sales Rep
+            {props.label}
           </IGSText>
           <div className="select-input__container">
             {props.searcheable && (

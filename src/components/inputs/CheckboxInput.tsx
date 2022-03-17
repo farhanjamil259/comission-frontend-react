@@ -3,14 +3,14 @@ import React from "react";
 import IGSIcon from "../icon/IGSIcon";
 import IGSText from "../text/IGSText";
 
-type CheckboxInputProps = {
+type CheckboxProps = {
   value?: boolean;
   label?: string;
   onChange?: (value: boolean) => void;
   disabled?: boolean;
 };
 
-const CheckboxInput = (props: CheckboxInputProps): React.ReactElement => {
+const Checkbox = (props: CheckboxProps): React.ReactElement => {
   const coreClassName = "checkbox__input";
   const cssClassNames = classNames(coreClassName, {
     [`${coreClassName}--checked`]: props.value,
@@ -34,4 +34,4 @@ const CheckboxInput = (props: CheckboxInputProps): React.ReactElement => {
   );
 };
 
-export default CheckboxInput;
+export default Checkbox;

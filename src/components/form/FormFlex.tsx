@@ -1,12 +1,12 @@
 import classNames from "classnames";
 import React from "react";
 
-type FormFlexProps = {
+type XFlexProps = {
   children?: React.ReactElement | React.ReactElement[];
   column?: boolean;
 };
 
-const FormFlex = (props: FormFlexProps): React.ReactElement => {
+const XFlex = (props: XFlexProps): React.ReactElement => {
   const coreClass = "form-flex";
   const directionClasses = [
     {
@@ -21,4 +21,4 @@ const FormFlex = (props: FormFlexProps): React.ReactElement => {
   );
 };
 
-export default FormFlex;
+export default XFlex;

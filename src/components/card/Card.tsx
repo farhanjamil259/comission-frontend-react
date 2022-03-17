@@ -4,9 +4,16 @@ import React from "react";
 type CardProps = {
   children?: React.ReactElement | React.ReactElement[];
   radius?: "half" | "none";
+  border?: boolean;
+  noShadow?: boolean;
 };
 
-const Card = ({ children, radius }: CardProps): React.ReactElement => {
+const Card = ({
+  children,
+  radius,
+  border,
+  noShadow,
+}: CardProps): React.ReactElement => {
   const coreClass = "igs-card";
   return (
     <div
@@ -14,6 +21,8 @@ const Card = ({ children, radius }: CardProps): React.ReactElement => {
         {
           [`${coreClass}--radius-half`]: radius === "half",
           [`${coreClass}--radius-none`]: radius === "none",
+          [`${coreClass}--no-shadow`]: noShadow,
+          [`${coreClass}--border`]: border,
         },
       ])}
     >

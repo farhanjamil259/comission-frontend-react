@@ -21,7 +21,8 @@ interface IIGSInputProps {
     | "currency"
     | "calendar-day"
     | "search"
-    | "rate";
+    | "rate"
+    | "percent";
   placeholder?: string;
   showIcon?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -79,7 +80,7 @@ const IGSInput = (props: IIGSInputProps): React.ReactElement => {
       {props.type === "calendar-day" && (
         <IGSIcon className={postIconClass} type="calender" />
       )}
-      {props.type === "rate" && (
+      {props.type === "percent" && (
         <IGSIcon className={postIconClass} type="percent" />
       )}
     </div>

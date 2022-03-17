@@ -28,6 +28,7 @@
 @import "../components/form/CustomForm";
 @import "../components/inputs/RangeInput";
 @import "../components/logo/Logo";
+@import "../components/typography/XText";
 
 body {
   padding: 0;
@@ -35,4 +36,12 @@ body {
   color: #fff;
   font-family: Inter, sans-serif;
   background-color: $dark-500;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px $dark-400 inset !important;
+  box-shadow: 0 0 0 30px $dark-400 inset !important;
 }

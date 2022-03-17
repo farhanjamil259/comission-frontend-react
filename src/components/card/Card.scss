@@ -1,8 +1,9 @@
 .igs-card {
   background-color: $dark-400;
   border-radius: 16px;
-  padding: 29px;
+  padding: 24px;
   display: flex;
+  flex-direction: column;
   box-shadow: $elivation-3-dark;
 
   &--radius-half {
@@ -11,5 +12,13 @@
 
   &--radius-none {
     border-radius: 0;
+  }
+
+  &--no-shadow {
+    box-shadow: none;
+  }
+
+  &--border {
+    border: 2px solid $dark-300;
   }
 }
