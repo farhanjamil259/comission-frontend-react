@@ -33,6 +33,7 @@ const EmployeeAddStepTwo = (props: CustomFormProps): React.ReactElement => {
     <CustomForm id={props.id} title="Select Role">
       <XFlex column>
         <RadioInput options={radioOptions} />
+        {/* TODO: replace with input field */}
         <SelectInput label="Assign Team" searcheable options={searchOptions} />
       </XFlex>
     </CustomForm>
