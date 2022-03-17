@@ -34,7 +34,7 @@ const SelectInput = (props: SelectInputProps): React.ReactElement => {
           {props.label}
         </IGSText>
         <IGSText className="select-input__value" type="body-2">
-          Please select an option
+          {props.value ? props.value : " Please select an option"}
         </IGSText>
       </div>
       <div className="select-input__dropdown">
@@ -43,6 +43,9 @@ const SelectInput = (props: SelectInputProps): React.ReactElement => {
             <div
               key={optionIndex + option.label + "OptionDropdown"}
               className="select-input__dropdown--item"
+              onClick={(): void => {
+                props.onChange && props.onChange(option.value);
+              }}
             >
               <IGSIcon
                 className="select-input__dropdown--arrow"
