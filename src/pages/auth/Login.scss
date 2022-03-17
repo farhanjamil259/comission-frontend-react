@@ -6,25 +6,21 @@
   &__logo {
     margin-bottom: 32px;
   }
+
   &-section-left,
   &-section-right {
     display: flex;
-
     justify-content: center;
-  }
-  &-section-left {
-    align-items: center;
-  }
-  &-section-right {
-    padding: 0 64px;
-    flex-direction: column;
   }
 
   &-section-left {
     background-color: $dark-400;
+    align-items: center;
   }
 
   &-section-right {
+    padding: 0 64px;
+    flex-direction: column;
     background-color: $dark-500;
   }
 }
