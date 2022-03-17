@@ -24,19 +24,7 @@ const options: SelectOptions[] = [
 ];
 
 const AhsanComponents = (): React.ReactElement => {
-  return (
-    <form style={{ padding: "50px" }}>
-      <XFlex column>
-        <IGSInput type="email" label="Email Address" underline showIcon />
-      </XFlex>
-    </form>
-    // <Wizard title="asdasd">
-    //   <EmployeeAddStepOne />
-    //   <form id="create-employee-2">
-    //     <div></div>
-    //   </form>
-    // </Wizard>
-  );
+  return <div></div>;
 };
 
 export default AhsanComponents;
