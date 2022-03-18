@@ -6,19 +6,14 @@
   padding: 13px;
   border: 2px solid $dark-300;
   box-sizing: border-box;
-  // box-shadow: inset 0 0.5px 4px rgb(0 0 0 / 32%);
   border-radius: 8px;
   align-items: center;
   max-height: 65px;
   cursor: text;
   position: relative;
 
-  &:focus-within {
-    // border: 2px solid $primary-400;
-  }
-
   &--active {
-    border-bottom: none;
+    border-bottom: 2px solid transparent;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 
