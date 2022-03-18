@@ -29,6 +29,12 @@
 @import "../components/inputs/RangeInput";
 @import "../components/logo/Logo";
 @import "../components/typography/XText";
+@import "../pages/performance/Performance";
+@import "../pages/performance/components/PerformanceSidenav";
+@import "../pages/performance/components/HorizontalMenu";
+@import "../pages/performance/pages/SalesOverview";
+@import "../pages/performance/components/PerformanceCard";
+@import "../pages/performance/pages/GeneralInfo";
 
 body {
   padding: 0;

@@ -1,0 +1,19 @@
+.horizontal-menu {
+  display: flex;
+  flex-direction: column;
+
+  &--link {
+    color: $light-100;
+    text-decoration: none;
+    padding: 16px;
+
+    &--active {
+      background-color: $dark-500;
+    }
+
+    &:hover {
+      background-color: $dark-500;
+      cursor: pointer;
+    }
+  }
+}
