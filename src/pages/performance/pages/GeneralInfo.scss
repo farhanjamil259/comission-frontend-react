@@ -1,0 +1,21 @@
+.general-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+
+  &__form {
+    padding: 39px 45px;
+    // background-color: red;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $dark-200;
+  }
+
+  &__empty {
+    background-color: #181822;
+  }
+}
