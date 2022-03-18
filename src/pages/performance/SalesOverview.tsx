@@ -1,4 +1,5 @@
 import React from "react";
+import Chart from "../../components/chart/Chart";
 import SelectInput from "../../components/inputs/SelectInput";
 import IGSText from "../../components/text/IGSText";
 import PerformanceCard from "./components/PerformanceCard";
@@ -41,7 +42,9 @@ const SalesOverview = (): React.ReactElement => {
           More 3 Sales, You will earn +2% commission.{" "}
         </IGSText>
       </div>
-      <div className="sales-overview__chart"></div>
+      <div className="sales-overview__chart">
+        <Chart />
+      </div>
     </div>
   );
 };
