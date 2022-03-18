@@ -1,5 +1,9 @@
 .custom-form {
   min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 430px;
 
   &__title {
     font-size: 18px;
