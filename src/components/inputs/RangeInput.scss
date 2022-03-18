@@ -3,5 +3,25 @@
 }
 
 .igs-range {
-  margin: 0 0 20px;
+  margin: 50px 20px 20px 20px;
+}
+
+.rc-slider-tooltip {
+  background-color: transparent;
+  top: 60px;
+}
+
+.rc-slider-tooltip-inner {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+  color: $dark-200;
+}
+
+.rc-slider-tooltip-arrow {
+  display: none;
+}
+
+.rc-slider-tooltip-placement-top {
+  top: -50px !important;
 }
