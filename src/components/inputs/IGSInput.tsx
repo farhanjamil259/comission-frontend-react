@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { createRef, useEffect } from "react";
+import React, { createRef, useEffect, useState } from "react";
 import { IconTypes } from "../icon/Icons";
 import IGSIcon from "../icon/IGSIcon";
 import IGSText from "../text/IGSText";
@@ -28,6 +28,7 @@ interface IIGSInputProps {
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   value?: string;
   underline?: boolean;
+  searchable?: boolean;
 }
 
 const generateIcon = (type: IIGSInputProps["type"]): IconTypes | undefined => {
@@ -37,28 +38,35 @@ const generateIcon = (type: IIGSInputProps["type"]): IconTypes | undefined => {
 };
 
 // TODO: implement format for currency
-
 const IGSInput = (props: IIGSInputProps): React.ReactElement => {
   const inputRef = createRef<HTMLInputElement>();
+
+  const [active, setActive] = useState(false);
+
   const coreClass = "igs-input";
   const inputClass = classNames(coreClass, [
     {
       [`${coreClass}--underline`]: props.underline,
-    }, // A cat doesn't bark, so it will return never// A cat doesn't bark, so it will return never
+      [`${coreClass}--searchable`]: props.searchable,
+      [`${coreClass}--active`]: active,
+    },
   ]);
+
   const preIconClass = `${coreClass}__icon ${coreClass}__icon--pre`;
   const postIconClass = `${coreClass}__icon ${coreClass}__icon--post`;
+
   return (
-    <div
-      className={inputClass}
-      onClick={(): void => {
-        inputRef.current?.focus();
-      }}
-    >
+    <div className={inputClass}>
       {props.showIcon && !props.underline && (
         <IGSIcon className={preIconClass} type={generateIcon(props.type)} />
       )}
-      <div className="igs-input__container">
+
+      <div
+        className="igs-input__container"
+        onClick={(): void => {
+          inputRef.current?.focus();
+        }}
+      >
         <IGSText className="igs-input__label" type="label-medium">
           {props.label}
         </IGSText>
@@ -69,8 +77,28 @@ const IGSInput = (props: IIGSInputProps): React.ReactElement => {
           ref={inputRef}
           className="igs-input__field"
           placeholder={props.placeholder}
+          onFocus={(): void => setActive(true)}
+          onBlur={(): void => {
+            setTimeout(() => {
+              inputRef.current?.blur();
+              setActive(false);
+            }, 200);
+          }}
         />
       </div>
+
+      <div className="igs-input__dropdown">
+        <div className="igs-input__dropdown--item">
+          <IGSIcon
+            className="igs-input__dropdown--arrow"
+            width="12px"
+            height="12px"
+            type="right"
+          />
+          asdasd
+        </div>
+      </div>
+
       {props.type === "password" && (
         <IGSIcon className={postIconClass} type="eye" />
       )}

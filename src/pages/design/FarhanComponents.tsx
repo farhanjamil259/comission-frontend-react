@@ -1,9 +1,23 @@
 import React from "react";
+import IGSInput from "../../components/inputs/IGSInput";
 import SelectInput from "../../components/inputs/SelectInput";
-import RangeInput from "../../components/inputs/RangeInput";
 
 const FarhanComponents = (): React.ReactElement => {
-  return <div></div>;
+  return (
+    <div>
+      <SelectInput
+        label="test"
+        options={[
+          {
+            label: "asd",
+            value: "asd2",
+          },
+        ]}
+      />
+
+      <IGSInput label="Test" />
+    </div>
+  );
 };
 
 export default FarhanComponents;

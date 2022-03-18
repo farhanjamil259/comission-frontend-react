@@ -6,14 +6,25 @@
   padding: 13px;
   border: 2px solid $dark-300;
   box-sizing: border-box;
-  box-shadow: inset 0 0.5px 4px rgb(0 0 0 / 32%);
+  // box-shadow: inset 0 0.5px 4px rgb(0 0 0 / 32%);
   border-radius: 8px;
   align-items: center;
   max-height: 65px;
   cursor: text;
+  position: relative;
 
   &:focus-within {
-    border: 2px solid $primary-400;
+    // border: 2px solid $primary-400;
+  }
+
+  &--active {
+    border-bottom: none;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    #{$parent}__dropdown {
+      display: block;
+    }
   }
 
   &--underline {
@@ -61,6 +72,36 @@
       &::placeholder {
         color: $dark-300;
       }
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    left: -2px;
+    top: 60px;
+    background-color: inherit;
+    display: none;
+    border: 2px solid $dark-300;
+    border-top: none;
+    width: 100%;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding-bottom: 13px;
+
+    &--item {
+      display: flex;
+      align-items: center;
+      margin-left: 13px;
+      color: $dark-200;
+
+      &:hover {
+        color: $light-100;
+        cursor: pointer;
+      }
+    }
+
+    &--arrow {
+      margin-right: 11px;
     }
   }
 
