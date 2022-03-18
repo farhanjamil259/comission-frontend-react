@@ -1,8 +1,8 @@
 import React from "react";
-import Chart from "../../components/chart/Chart";
-import SelectInput from "../../components/inputs/SelectInput";
-import IGSText from "../../components/text/IGSText";
-import PerformanceCard from "./components/PerformanceCard";
+import Chart from "../../../components/chart/Chart";
+import SelectInput from "../../../components/inputs/SelectInput";
+import IGSText from "../../../components/text/IGSText";
+import PerformanceCard from "../components/PerformanceCard";
 
 const SalesOverview = (): React.ReactElement => {
   return (

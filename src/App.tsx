@@ -6,9 +6,9 @@ import Home from "./pages/Home";
 import { dashboardRoutes } from "./AppRoutes";
 import Register from "./pages/auth/Register";
 import Performance from "./pages/performance/Performance";
-import SalesOverview from "./pages/performance/SalesOverview";
-import GeneralInfo from "./pages/performance/GeneralInfo";
-import EmployeeDetails from "./pages/performance/EmployeeDetails";
+import SalesOverview from "./pages/performance/pages/SalesOverview";
+import GeneralInfo from "./pages/performance/pages/GeneralInfo";
+import EmployeeDetails from "./pages/performance/pages/EmployeeDetails";
 
 const App = (): React.ReactElement => {
   return (
