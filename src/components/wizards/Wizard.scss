@@ -1,4 +1,6 @@
-.wizard-container {
+.wizard {
+  $parent: &;
+
   position: absolute;
   height: 100vh;
   width: 100%;
@@ -6,95 +8,72 @@
   left: 0;
   background-color: $dark-500;
   display: none;
-  overflow: hidden;
+  grid-template:
+    "wizard-header" 70px
+    "wizard-body" 1fr
+    "wizard-footer" 100px / 1fr;
 
   &--show {
-    display: block;
+    display: grid;
   }
 
-  .wizard {
-    height: 100%;
+  &__header {
+    grid-area: wizard-header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    background-color: $dark-400;
+  }
+
+  &__body {
+    grid-area: wizard-body;
+    overflow: auto;
     position: relative;
+    padding: 64px;
 
-    &__header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px;
-      background-color: $dark-400;
-
-      &--title,
-      &--step {
-        margin: 0;
-        padding: 0;
-        text-transform: uppercase;
-      }
-
-      &--title {
-        color: $light-100;
-      }
-
-      &--step {
-        color: $dark-200;
-      }
-    }
-
-    &__progress {
-      height: 5px;
-      position: relative;
+    #{$parent}__progress {
+      position: fixed;
+      top: 70px;
+      left: 0;
       width: 100%;
+      height: 5px;
 
       &--bar {
-        position: absolute;
-        height: 100%;
         background: $gradient-07;
+        position: absolute;
+        height: 5px;
         z-index: 999;
       }
 
       &--bg {
-        position: absolute;
-        height: 100%;
-        width: 100%;
         background-color: $dark-300;
+        position: absolute;
+        width: 100%;
+        height: 5px;
         z-index: 998;
       }
     }
+  }
 
-    &__child {
-      width: 400px;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: -32px;
-      align-items: center;
-      justify-content: center;
-    }
+  &__footer {
+    grid-area: wizard-footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
 
-    &__footer {
+    &--text {
       position: absolute;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 20px;
-      bottom: 32px;
-      left: 0;
-      width: 100%;
+      left: 40px;
+      cursor: pointer;
+    }
 
-      &--text {
-        position: absolute;
-        bottom: 0;
-        left: 40px;
-        display: flex;
-        align-items: center;
-        color: $dark-200;
-        cursor: pointer;
-      }
-
-      &--icon {
-        margin-right: 16px;
-      }
+    &--icon {
+      margin-right: 11px;
     }
   }
 }
