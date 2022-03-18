@@ -19,6 +19,8 @@ type RangeInputProps = {
   small?: boolean;
   noHandle?: boolean;
   marks?: {};
+  tipPrefix?: string;
+  tipPostfix?: string;
 };
 
 const generateGradient = (color: RangeInputProps["color"]): string => {
@@ -48,7 +50,13 @@ const RangeInput = (props: RangeInputProps): React.ReactElement => {
       <div className="igs-range">
         <Range
           tipFormatter={(value): React.ReactNode => {
-            return <div>{value}</div>;
+            return (
+              <div>
+                {props.tipPrefix}
+                {value}
+                {props.tipPostfix}
+              </div>
+            );
           }}
           tipProps={{
             visible: true,
@@ -94,7 +102,13 @@ const RangeInput = (props: RangeInputProps): React.ReactElement => {
       <div className="igs-range">
         <NewSlider
           tipFormatter={(value): React.ReactNode => {
-            return <div>{value}</div>;
+            return (
+              <div>
+                {props.tipPrefix}
+                {value}
+                {props.tipPostfix}
+              </div>
+            );
           }}
           tipProps={{
             visible: true,
