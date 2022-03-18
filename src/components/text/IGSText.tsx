@@ -22,9 +22,14 @@ interface TextProps extends React.HTMLAttributes<HTMLElement> {
     | "stylize-small"
     | "stylize-tiny"
     | "p";
+  tag?: "p" | "span";
 }
 
-const generateTag = (type: TextProps["type"]): string => {
+const generateTag = (
+  type: TextProps["type"],
+  tag: TextProps["tag"]
+): string => {
+  if (tag) return tag;
   switch (type) {
     case "heading-1":
       return "h1";
@@ -55,6 +60,7 @@ const IGSText = ({
   type,
   children,
   className,
+  tag,
   ...otherProps
 }: TextProps): React.ReactElement => {
   const parts = type?.split("-");
@@ -62,7 +68,7 @@ const IGSText = ({
   const customClassName = classNames(modifledClassName);
 
   return React.createElement(
-    generateTag(type),
+    generateTag(type, tag),
     { ...otherProps, className: `${customClassName} ${className}` },
     children
   );

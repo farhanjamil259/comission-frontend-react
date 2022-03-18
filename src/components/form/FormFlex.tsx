@@ -4,6 +4,7 @@ import React from "react";
 type XFlexProps = {
   children?: React.ReactElement | React.ReactElement[];
   column?: boolean;
+  gap?: number;
 };
 
 const XFlex = (props: XFlexProps): React.ReactElement => {
@@ -15,7 +16,10 @@ const XFlex = (props: XFlexProps): React.ReactElement => {
   ];
   const className = classNames(coreClass, directionClasses);
   return (
-    <div className={className} style={{ width: "100%" }}>
+    <div
+      className={className}
+      style={{ width: "100%", gap: `${props.gap ?? 10}px` }}
+    >
       {props.children}
     </div>
   );
