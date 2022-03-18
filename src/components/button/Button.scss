@@ -1,6 +1,9 @@
 .igs-button {
+  font-size: 14px;
+  font-weight: bold;
   min-width: 148px;
   padding: 8px;
+  height: 40px;
 
   &:hover {
     cursor: pointer;
@@ -11,11 +14,25 @@
   border-radius: 8px;
 
   &--success {
-    background: $gradient-success;
+    background: $gradient-04;
   }
 
   &--primary {
-    background: $gradient-primary;
+    background: $gradient-07;
+  }
+
+  &--dark {
+    background: $dark-400;
+    color: $dark-200;
+
+    &:hover {
+      background: $dark-300;
+      color: $dark-100;
+    }
+  }
+
+  &--danger {
+    background: $gradient-02;
   }
 
   &--rounded {

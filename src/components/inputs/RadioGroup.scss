@@ -1,0 +1,57 @@
+.radio-input {
+  $parent: &;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  &__options {
+    display: flex;
+    align-items: center;
+    padding: 13px 13px 13px 0;
+    background-color: $dark-400;
+    border-radius: 8px;
+    border: 2px solid $dark-300;
+    cursor: pointer;
+
+    &--checked {
+      border: 2px solid $primary-400;
+
+      // FIXME: add gradient border and icon color
+      &--icon {
+        color: $primary-400;
+      }
+
+      #{$parent}__option {
+        &--label {
+          color: $primary-400;
+
+          // TODO: Uncomment after border and icon gradients are applied
+          // background: $gradient-07;
+          // background-clip: text;
+          // -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+
+    #{$parent}__option {
+      display: flex;
+      flex-direction: column;
+      margin-left: 12px;
+      width: 100%;
+
+      &--label,
+      &--text {
+        cursor: pointer;
+      }
+
+      &--label {
+        color: $dark-100;
+      }
+
+      &--text {
+        color: $dark-200;
+      }
+    }
+  }
+}

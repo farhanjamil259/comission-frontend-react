@@ -1,20 +1,20 @@
 .igs-container {
   display: grid;
-  grid-template-columns: 240px 1fr;
-  grid-template-rows: 50px 1fr 50px;
-  grid-template-areas:
-    "sidenav header"
-    "sidenav main"
-    "sidenav footer";
+  grid-template:
+    "sidenav header" 50px
+    "sidenav main" 1fr
+    "sidenav footer" 50px / 240px 1fr;
   height: 100vh;
 
   .main {
     grid-area: main;
-    background-color: $dark0;
+    background-color: $dark-500;
+    overflow: auto;
   }
 
   .footer {
+    padding: 0;
     grid-area: footer;
-    background-color: $dark1;
+    background-color: $dark-400;
   }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import LOGO from "../../../assets/images/Logo.png";
+import Logo from "../../logo/Logo";
 
 interface MenuItem {
   label: string;
@@ -51,7 +51,7 @@ const SideNav = (): React.ReactElement => {
   return (
     <aside className="sidenav">
       <div className="sidenav-header">
-        <img src={LOGO} alt="" />
+        <Logo size="small" />
       </div>
       <div className="sidenav-menu">
         {menuItems.map((item, itemIndex) => {

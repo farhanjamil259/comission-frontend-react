@@ -1,0 +1,78 @@
+.igs-input {
+  $parent: &;
+
+  background-color: $dark-400;
+  display: flex;
+  padding: 13px;
+  border: 2px solid $dark-300;
+  box-sizing: border-box;
+  box-shadow: inset 0 0.5px 4px rgb(0 0 0 / 32%);
+  border-radius: 8px;
+  align-items: center;
+  max-height: 65px;
+  cursor: text;
+
+  &:focus-within {
+    border: 2px solid $primary-400;
+  }
+
+  &--underline {
+    border-radius: 0;
+    border-width: 0;
+    border-bottom-width: 2px;
+    padding: 13px 0;
+    background: transparent;
+  }
+
+  &--underline:focus-within {
+    border-radius: 0;
+    border-width: 0;
+    border-bottom-width: 2px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: between;
+    flex-direction: column;
+    width: 100%;
+
+    #{$parent}__label {
+      // TODO: find a better way to handle cursor
+      cursor: text;
+      color: $dark-200;
+      padding: 0;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    #{$parent}__field {
+      border: none;
+      appearance: none;
+      background-color: transparent;
+      color: $light-300;
+      padding: 2px 0 0;
+      margin: 0;
+      font-size: 14px;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $dark-300;
+      }
+    }
+  }
+
+  #{$parent}__icon {
+    color: $dark-200;
+  }
+
+  #{$parent}__icon--pre {
+    margin-right: 10px;
+  }
+
+  #{$parent}__icon--post {
+    margin-left: 10px;
+  }
+}

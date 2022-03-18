@@ -1,0 +1,38 @@
+$margin-main: 28px;
+
+.contracts-page {
+  &-section--header {
+    margin: 56px 0 $margin-main $margin-main;
+
+    &-container {
+      display: flex;
+      align-items: center;
+      position: relative;
+      width: 100%;
+
+      &-image {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+
+  &-section--actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: $margin-main;
+    margin-top: $margin-main + 10px;
+
+    &-left {
+      width: 282px;
+    }
+  }
+
+  &-section--contracts {
+    margin: $margin-main;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}

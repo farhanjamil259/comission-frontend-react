@@ -1,0 +1,51 @@
+.employee-id-card {
+  display: flex;
+  align-items: center;
+
+  &-id {
+    color: $dark-100;
+
+    &-img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 8px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+
+  &-recomendation {
+    display: flex;
+    flex-direction: column;
+    margin-left: 38px;
+    height: 100%;
+    width: 280px;
+
+    &-name {
+      margin: 0 0 4px;
+      padding: 0;
+    }
+
+    &-desc {
+      color: $dark-200;
+      margin-bottom: 21px;
+    }
+
+    &-recommendations {
+      display: flex;
+      margin-top: auto;
+
+      &-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 41px;
+        height: 41px;
+        margin-right: 5px;
+        background-color: $dark-300;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}

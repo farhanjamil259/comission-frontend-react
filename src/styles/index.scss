@@ -2,19 +2,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 
 @import "variables";
-
-@import "../components/inputs/InputField.scss";
-@import "../components/layout/sidenav/SideNav.scss";
-@import "../components/layout/Layout.scss";
-@import "../components/button/Button.scss";
-@import "../components/layout/header/Header.scss";
-@import "../pages/auth/Login.scss";
-@import "../components/chart/Chart.scss";
+@import "../components/text/IGSText";
+@import "../components/inputs/IGSInput";
+@import "../components/layout/sidenav/SideNav";
+@import "../components/layout/Layout";
+@import "../components/button/Button";
+@import "../components/layout/header/Header";
+@import "../pages/auth/Login";
+@import "../pages/auth/Register";
+@import "../components/card/Card";
+@import "../pages/EmployeeDashboard/components/employeeIdCard/EmployeeIdCard";
+@import "../pages/EmployeeDashboard/components/employeeCard/EmployeeCard";
+@import "../pages/EmployeeDashboard/Employees";
+@import "../pages/Contracts/Contracts";
+@import "../pages/Contracts/components/CounterCard";
+@import "../pages/Contracts/components/ContractCard";
+@import "../components/inputs/SelectInput";
+@import "../components/inputs/RadioGroup";
+@import "../components/button/ActionLink";
+@import "../components/inputs/CheckboxInput";
+@import "../pages/comissionCalculator/CommisionCalculator";
+@import "../components/wizards/Wizard";
+@import "../components/wizards/components/Steps";
+@import "../components/form/FormFlex";
+@import "../components/form/CustomForm";
+@import "../components/inputs/RangeInput";
+@import "../components/logo/Logo";
+@import "../components/typography/XText";
+@import "../pages/performance/Performance";
+@import "../pages/performance/components/PerformanceSidenav";
+@import "../pages/performance/components/HorizontalMenu";
+@import "../pages/performance/SalesOverview";
+@import "../pages/performance/components/PerformanceCard";
 
 body {
   padding: 0;
   margin: 0;
   color: #fff;
-  font-family: "Inter", sans-serif;
-  background-color: $dark0;
+  font-family: Inter, sans-serif;
+  background-color: $dark-500;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px $dark-400 inset !important;
 }

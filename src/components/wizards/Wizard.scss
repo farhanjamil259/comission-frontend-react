@@ -1,0 +1,100 @@
+.wizard-container {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: $dark-500;
+  display: none;
+  overflow: hidden;
+
+  &--show {
+    display: block;
+  }
+
+  .wizard {
+    height: 100%;
+    position: relative;
+
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: $dark-400;
+
+      &--title,
+      &--step {
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+      }
+
+      &--title {
+        color: $light-100;
+      }
+
+      &--step {
+        color: $dark-200;
+      }
+    }
+
+    &__progress {
+      height: 5px;
+      position: relative;
+      width: 100%;
+
+      &--bar {
+        position: absolute;
+        height: 100%;
+        background: $gradient-07;
+        z-index: 999;
+      }
+
+      &--bg {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: $dark-300;
+        z-index: 998;
+      }
+    }
+
+    &__child {
+      width: 400px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -32px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__footer {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      bottom: 32px;
+      left: 0;
+      width: 100%;
+
+      &--text {
+        position: absolute;
+        bottom: 0;
+        left: 40px;
+        display: flex;
+        align-items: center;
+        color: $dark-200;
+        cursor: pointer;
+      }
+
+      &--icon {
+        margin-right: 16px;
+      }
+    }
+  }
+}
