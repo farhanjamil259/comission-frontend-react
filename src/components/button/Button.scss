@@ -1,8 +1,8 @@
 .igs-button {
   font-size: 14px;
   font-weight: bold;
-  min-width: 148px;
-  padding: 8px;
+
+  padding: 8px 40px;
   height: 40px;
 
   &:hover {
@@ -19,6 +19,10 @@
 
   &--primary {
     background: $gradient-07;
+  }
+
+  &--secondary {
+    background: $gradient-09;
   }
 
   &--dark {

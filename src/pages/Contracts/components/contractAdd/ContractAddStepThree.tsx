@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "../../../../components/button/Button";
 import Card from "../../../../components/card/Card";
 import CustomForm from "../../../../components/form/CustomForm";
 import XFlex from "../../../../components/form/FormFlex";
@@ -28,49 +29,54 @@ const ContractAddStepThree = (props: CustomFormProps): React.ReactElement => {
           </div>
           <Checkbox />
         </XFlex>
-
         <IGSInput label="Tier Name" />
         <IGSInput type="percent" label="Commission" />
-        <div>
-          <TypoText color="dark-100" marginBottom="small">
-            Target USD
-          </TypoText>
-          <TypoText size="small" color="dark-200">
-            Apply upper tier commission on all sales.
-          </TypoText>
-        </div>
-        <RangeInput
-          step={5}
-          min={0}
-          max={100}
-          type="slider"
-          sliderValue={val}
-          onChange={(event): void => {
-            setVal(event as number);
-          }}
-          color="primary"
-          marks={{ 0: "0M", 25: "25M", 50: "50M", 75: "75M", 100: "100M" }}
-        />
-        <div>
-          <TypoText color="dark-100" marginBottom="small">
-            Target Applicable
-          </TypoText>
-          <TypoText size="small" color="dark-200">
-            Apply upper tier commission on all sales.
-          </TypoText>
-        </div>
-        <RangeInput
-          min={1}
-          max={30}
-          type="range"
-          rangeValues={range}
-          onChange={(event): void => {
-            setRange(event as number[]);
-          }}
-          color="primary"
-          marks={{ 1: "1st", 5: "5th", 10: "10th", 15: "15th", 30: "30th" }}
-        />
-        <Card border>
+        <XFlex column gap={60}>
+          <div>
+            <TypoText color="dark-100" marginBottom="small">
+              Target USD
+            </TypoText>
+            <TypoText size="small" color="dark-200">
+              Apply upper tier commission on all sales.
+            </TypoText>
+          </div>
+          <RangeInput
+            step={5}
+            min={0}
+            max={100}
+            type="slider"
+            sliderValue={val}
+            onChange={(event): void => {
+              setVal(event as number);
+            }}
+            color="primary"
+            marks={{ 0: "0M", 25: "25M", 50: "50M", 75: "75M", 100: "100M" }}
+          />
+        </XFlex>
+        <XFlex column gap={60}>
+          <XFlex column gap={4}>
+            <TypoText color="dark-100">Target Applicable</TypoText>
+            <TypoText size="small" color="dark-200">
+              Apply upper tier commission on all sales.
+            </TypoText>
+          </XFlex>
+          <RangeInput
+            min={1}
+            max={30}
+            type="range"
+            rangeValues={range}
+            onChange={(event): void => {
+              setRange(event as number[]);
+            }}
+            color="primary"
+            marks={{ 1: "1st", 5: "5th", 10: "10th", 15: "15th", 30: "30th" }}
+          />
+        </XFlex>
+        <XFlex>
+          <div></div>
+          <Button text="Add Tier" variant="success" rounded />
+        </XFlex>
+        {/* <Card border>
           <XFlex>
             <div>
               <TypoText size="small" color="dark-200" marginBottom="small">
@@ -121,7 +127,7 @@ const ContractAddStepThree = (props: CustomFormProps): React.ReactElement => {
               }}
             />
           </div>
-        </Card>
+        </Card> */}
       </XFlex>
     </CustomForm>
   );
