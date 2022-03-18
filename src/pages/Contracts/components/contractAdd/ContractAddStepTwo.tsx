@@ -45,13 +45,16 @@ const ContractAddStepTwo = (props: CustomFormProps): React.ReactElement => {
   return (
     <CustomForm id={props.id} title="Commission Criteria per Solution">
       <XFlex column>
+        {/* TODO: replace with input field */}
         <SelectInput
           label="COMMISSION METRIC"
           searcheable
           options={metricOptions}
         />
         <IGSInput type="percent" label="Base Commission" />
+        {/* TODO: replace with input field */}
         <SelectInput label="SALE MODE" searcheable options={saleOptions} />
+        {/* TODO: replace with input field */}
         <SelectInput
           label="COMMISSION AGAINST"
           searcheable

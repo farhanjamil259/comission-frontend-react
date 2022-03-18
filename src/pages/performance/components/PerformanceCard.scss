@@ -1,0 +1,13 @@
+.performance-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  &__label {
+    color: $primary-200;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}

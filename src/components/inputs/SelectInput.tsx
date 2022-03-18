@@ -16,111 +16,44 @@ type SelectInputProps = {
 };
 
 const SelectInput = (props: SelectInputProps): React.ReactElement => {
-  const [isOpened, setIsOpened] = useState(false);
-
-  const dropdownContainerRef = useRef<HTMLDivElement>(null);
-
-  const [inputValue, setInputValue] = useState<string>("");
-
-  const filteredOptions = useMemo(() => {
-    return props.options?.filter((o) => {
-      return o.label.includes(inputValue) || o.value.includes(inputValue);
-    });
-  }, [inputValue, props.options]);
-
-  // TODO: Fix bug clicking again does not close
-  useEffect(() => {
-    if (isOpened) {
-      const handler = (e: MouseEvent): void => {
-        if (
-          dropdownContainerRef.current &&
-          !dropdownContainerRef.current.contains(e.target as Node)
-        ) {
-          setIsOpened(false);
-        }
-      };
-      document.addEventListener("mousedown", handler);
-      return (): void => document.removeEventListener("mousedown", handler);
-    }
-  }, [isOpened, dropdownContainerRef]);
-
-  const toggleDropdown = (): void => {
-    isOpened ? setIsOpened(false) : setIsOpened(true);
-  };
-
-  const inputRef = useRef<HTMLInputElement>(null);
+  const [open, setOpen] = useState(true);
 
   return (
-    <div className="select-input-parent">
-      <div
-        className="select-input"
-        onClick={(): void => {
-          if (!inputRef.current) return;
-          inputRef.current.focus();
-          toggleDropdown();
-        }}
-      >
-        <div className="select-input__wrapper">
-          <IGSText type="label-medium" className="select-input__label">
-            {props.label}
-          </IGSText>
-          <div className="select-input__container">
-            {props.searcheable && (
-              <IGSIcon
-                className="select-input__icon"
-                width="14px"
-                height="14px"
-                type="search"
-              />
-            )}
-            {props.searcheable ? (
-              <input
-                ref={inputRef}
-                type="text"
-                className="select-input__field"
-                value={inputValue}
-                onChange={(e): void => setInputValue(e.target.value)}
-              />
-            ) : (
-              // TODO: Style the placeholder
-              "Please select a value"
-            )}
-          </div>
-        </div>
-        <IGSIcon
-          onClick={(e): void => {
-            e.stopPropagation();
-            props.onChange && props.onChange("");
-            toggleDropdown();
-          }}
-          type={props.searcheable ? "close" : isOpened ? "up" : "down"}
-        />
+    <div
+      onClick={(): void => setOpen(!open)}
+      className={`select-input ${open ? "select-input--active" : ""}`}
+    >
+      <IGSIcon
+        width="18px"
+        height="18px"
+        className="select-input--icon"
+        type="close"
+      />
+      <div className="select-input__information">
+        <IGSText className="select-input__label" type="label-medium">
+          {props.label}
+        </IGSText>
+        <IGSText className="select-input__value" type="body-2">
+          {props.value ? props.value : " Please select an option"}
+        </IGSText>
       </div>
-
-      <div
-        ref={dropdownContainerRef}
-        className={`select-input-parent__dropdown ${
-          isOpened && "select-input-parent__dropdown--show"
-        }`}
-      >
-        {filteredOptions?.map((o, i) => {
+      <div className="select-input__dropdown">
+        {props.options?.map((option, optionIndex) => {
           return (
             <div
-              key={i}
+              key={optionIndex + option.label + "OptionDropdown"}
+              className="select-input__dropdown--item"
               onClick={(): void => {
-                props.onChange && props.onChange(o.value);
-                toggleDropdown();
+                props.onChange && props.onChange(option.value);
               }}
-              className="select-input-parent__dropdown--item"
             >
-              {/* TODO: make right icon change able. and remove search icon */}
               <IGSIcon
-                className="select-input-parent__dropdown--icon"
-                width="16px"
-                height="16px"
+                className="select-input__dropdown--arrow"
+                width="12px"
+                height="12px"
                 type="right"
               />
-              {o.label}
+              {option.label}
             </div>
           );
         })}

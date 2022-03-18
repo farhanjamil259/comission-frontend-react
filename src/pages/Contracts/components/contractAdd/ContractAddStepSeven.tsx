@@ -29,6 +29,7 @@ const ContractAddStepSeven = (props: CustomFormProps): React.ReactElement => {
     <CustomForm id={props.id} title="Define Bonus">
       <XFlex column>
         <IGSInput label="Bonus" />
+        {/* TODO: replace with input field */}
         <SelectInput
           label="Bonus Type"
           searcheable
