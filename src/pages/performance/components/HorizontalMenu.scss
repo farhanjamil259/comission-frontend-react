@@ -7,6 +7,10 @@
     text-decoration: none;
     padding: 16px;
 
+    &--active {
+      background-color: $dark-500;
+    }
+
     &:hover {
       background-color: $dark-500;
       cursor: pointer;
