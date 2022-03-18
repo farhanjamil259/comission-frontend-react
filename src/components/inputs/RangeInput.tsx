@@ -1,8 +1,11 @@
 import React from "react";
-import Slider, { Range } from "rc-slider";
+import Slider, { Range as RCRange } from "rc-slider";
+
+const createSliderWithTooltip = Slider.createSliderWithTooltip;
+const Range = createSliderWithTooltip(RCRange);
+const NewSlider = createSliderWithTooltip(Slider);
 
 import "rc-slider/assets/index.css";
-import { TypoText } from "../typography/XText";
 
 type RangeInputProps = {
   rangeValues?: number[];
@@ -44,6 +47,14 @@ const RangeInput = (props: RangeInputProps): React.ReactElement => {
     return (
       <div className="igs-range">
         <Range
+          tipFormatter={(value): React.ReactNode => {
+            return <div>{value}</div>;
+          }}
+          tipProps={{
+            visible: true,
+            placement: "top",
+            prefixCls: "rc-slider-tooltip",
+          }}
           marks={props.marks}
           step={props.step}
           trackStyle={[
@@ -81,7 +92,15 @@ const RangeInput = (props: RangeInputProps): React.ReactElement => {
   } else {
     return (
       <div className="igs-range">
-        <Slider
+        <NewSlider
+          tipFormatter={(value): React.ReactNode => {
+            return <div>{value}</div>;
+          }}
+          tipProps={{
+            visible: true,
+            placement: "top",
+            prefixCls: "rc-slider-tooltip",
+          }}
           marks={props.marks}
           step={props.step}
           trackStyle={{
