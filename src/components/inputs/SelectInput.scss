@@ -1,106 +1,66 @@
 .select-input {
   $parent: &;
 
+  width: 400px;
   background-color: $dark-400;
-  display: flex;
   padding: 13px;
   border: 2px solid $dark-300;
-  box-sizing: border-box;
-  box-shadow: inset 0 0.5px 4px rgb(0 0 0 / 32%);
   border-radius: 8px;
-  align-items: center;
   max-height: 65px;
+  position: relative;
+  cursor: pointer;
 
-  &:focus-within {
+  &--icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--active {
+    border-bottom: none;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    border-bottom-width: 0;
-    box-shadow: none;
-  }
 
-  &__wrapper {
-    width: 100%;
-
-    #{$parent}__label {
-      color: $dark-200;
-      padding: 0;
-      margin: 0;
-      text-transform: uppercase;
-    }
-
-    #{$parent}__container {
-      width: 100%;
-      display: flex;
-      align-items: center;
-
-      #{$parent}__icon {
-        margin-top: 0.3em;
-        margin-right: 11px;
-      }
-
-      #{$parent}__field {
-        width: 100%;
-        border: none;
-        appearance: none;
-        background-color: transparent;
-        color: $light-300;
-        padding: 2px 0 0;
-        margin: 0;
-
-        &:focus {
-          outline: none;
-        }
-
-        &::placeholder {
-          color: $dark-300;
-        }
-      }
-
-      &__placeholder {
-        color: $dark-300;
-      }
+    #{$parent}__dropdown {
+      display: block;
     }
   }
-}
 
-.select-input-parent {
-  position: relative;
+  &__label {
+    color: $dark-200;
+  }
+
+  &__value {
+    color: $light-100;
+  }
 
   &__dropdown {
     position: absolute;
-    width: 99%;
-    background-color: $dark-400;
-    color: $dark-200;
+    left: -2px;
+    top: 63px;
+    background-color: inherit;
     display: none;
-    z-index: 3;
     border: 2px solid $dark-300;
-    border-radius: 8px;
-    border-top: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    padding-bottom: 11px;
-
-    &--show {
-      display: block;
-    }
+    border-top: none;
+    width: 100%;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding-bottom: 13px;
 
     &--item {
-      padding: 0 13px 4px;
       display: flex;
       align-items: center;
-      font-size: 14px;
+      margin-left: 13px;
+      color: $dark-200;
 
       &:hover {
-        color: $dark-100;
+        color: $light-100;
         cursor: pointer;
       }
     }
 
-    &--item:first-child {
-      padding-top: 0;
-    }
-
-    &--icon {
+    &--arrow {
       margin-right: 11px;
     }
   }

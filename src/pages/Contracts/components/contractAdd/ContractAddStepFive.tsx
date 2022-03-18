@@ -25,6 +25,7 @@ const ContractAddStepFive = (props: CustomFormProps): React.ReactElement => {
     <CustomForm id={props.id} title="Define Decelearators">
       <XFlex column>
         <IGSInput label="DECELERATOR" />
+        {/* TODO: replace with input field */}
         <SelectInput
           label="DECELERATOR MODE"
           searcheable
