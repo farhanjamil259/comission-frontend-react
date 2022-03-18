@@ -15,7 +15,15 @@ const FarhanComponents = (): React.ReactElement => {
         ]}
       />
 
-      <IGSInput label="Test" />
+      <IGSInput
+        label="Test"
+        options={[
+          {
+            label: "asd",
+            value: "asd2",
+          },
+        ]}
+      />
     </div>
   );
 };

@@ -1,12 +1,12 @@
 import classNames from "classnames";
-import React, { createRef, useEffect, useState } from "react";
+import React, { createRef, useEffect, useMemo, useState } from "react";
 import { IconTypes } from "../icon/Icons";
 import IGSIcon from "../icon/IGSIcon";
 import IGSText from "../text/IGSText";
 
-interface IData {
-  key: string;
-  val: string;
+export interface SelectOptions {
+  label: string;
+  value: string;
 }
 
 interface IIGSInputProps {
@@ -25,10 +25,11 @@ interface IIGSInputProps {
     | "percent";
   placeholder?: string;
   showIcon?: boolean;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (value: string) => void;
   value?: string;
   underline?: boolean;
   searchable?: boolean;
+  options?: SelectOptions[];
 }
 
 const generateIcon = (type: IIGSInputProps["type"]): IconTypes | undefined => {
@@ -43,12 +44,24 @@ const IGSInput = (props: IIGSInputProps): React.ReactElement => {
 
   const [active, setActive] = useState(false);
 
+  const [value, setValue] = useState("");
+
+  useEffect(() => {
+    if (props.value) setValue(props.value);
+  }, [props.value]);
+
+  const filteredOptions = useMemo(() => {
+    return props.options?.filter((option) => {
+      return option.label.includes(value) || option.value.includes(value);
+    });
+  }, [props.options, value]);
+
   const coreClass = "igs-input";
   const inputClass = classNames(coreClass, [
     {
       [`${coreClass}--underline`]: props.underline,
-      [`${coreClass}--searchable`]: props.searchable,
-      [`${coreClass}--active`]: active,
+      [`${coreClass}--searchable`]: props.options?.length,
+      [`${coreClass}--active`]: active && props.options?.length,
     },
   ]);
 
@@ -72,7 +85,10 @@ const IGSInput = (props: IIGSInputProps): React.ReactElement => {
         </IGSText>
         <input
           value={props.value}
-          onChange={props.onChange}
+          onChange={(e): void => {
+            setValue(e.target.value);
+            props.onChange && props.onChange(e.target.value);
+          }}
           type={(props.type === "password" && "password") || undefined}
           ref={inputRef}
           className="igs-input__field"
@@ -82,22 +98,31 @@ const IGSInput = (props: IIGSInputProps): React.ReactElement => {
             setTimeout(() => {
               inputRef.current?.blur();
               setActive(false);
-            }, 200);
+            }, 50);
           }}
         />
       </div>
 
-      <div className="igs-input__dropdown">
-        <div className="igs-input__dropdown--item">
-          <IGSIcon
-            className="igs-input__dropdown--arrow"
-            width="12px"
-            height="12px"
-            type="right"
-          />
-          asdasd
-        </div>
-      </div>
+      {filteredOptions?.map((option, optIndex) => {
+        return (
+          <div key={optIndex} className="igs-input__dropdown">
+            <div
+              className="igs-input__dropdown--item"
+              onClick={(): void => {
+                props.onChange && props.onChange(option.value);
+              }}
+            >
+              <IGSIcon
+                className="igs-input__dropdown--arrow"
+                width="12px"
+                height="12px"
+                type="right"
+              />
+              {option.label}
+            </div>
+          </div>
+        );
+      })}
 
       {props.type === "password" && (
         <IGSIcon className={postIconClass} type="eye" />
