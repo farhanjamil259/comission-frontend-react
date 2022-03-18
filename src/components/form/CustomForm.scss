@@ -4,6 +4,7 @@
   flex-direction: column;
   margin: auto;
   max-width: 430px;
+  gap: 10px;
 
   &__title {
     font-size: 18px;
@@ -28,6 +29,6 @@
   }
 
   &__body {
-    margin-top: 20px;
+    margin-top: 10px;
   }
 }
