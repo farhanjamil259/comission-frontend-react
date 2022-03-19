@@ -1,11 +1,21 @@
 .header {
   grid-area: header;
-  background-color: #14141d;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 29px;
+  color: $dark-200;
 
-  &--link {
-    color: #fff;
-    margin: 0 16px;
+  &__action {
+    display: flex;
+    align-items: center;
+  }
+
+  &__image {
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 16px;
   }
 }

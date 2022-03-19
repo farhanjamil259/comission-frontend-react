@@ -43,6 +43,14 @@ const menuItems: MenuItem[] = [
     label: "Help",
     path: "/help",
   },
+  {
+    label: "Farhan",
+    path: "/farhan",
+  },
+  {
+    label: "Ahsan",
+    path: "/ahsan",
+  },
 ];
 
 const SideNav = (): React.ReactElement => {
