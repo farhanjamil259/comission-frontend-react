@@ -1,0 +1,30 @@
+.profile-pic {
+  $parent: &;
+
+  width: 100px;
+  height: 100px;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    #{$parent}__button {
+      color: $dark-400;
+    }
+  }
+
+  &__image {
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: $dark-300;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+}

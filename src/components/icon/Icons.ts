@@ -16,6 +16,7 @@ export const icons = {
   left: "bi:arrow-left",
   setting: "ci:settings",
   user: "fa-regular:user",
+  add: "carbon:add-filled",
 };
 
 export type IconTypes = keyof typeof icons;
