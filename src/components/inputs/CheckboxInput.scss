@@ -3,6 +3,7 @@
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   &,
   & > * {
@@ -39,5 +40,9 @@
 
   &__label {
     color: $dark-100;
+  }
+
+  &__description {
+    color: $dark-200;
   }
 }

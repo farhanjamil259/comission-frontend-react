@@ -6,8 +6,10 @@ import IGSText from "../text/IGSText";
 type CheckboxProps = {
   value?: boolean;
   label?: string;
+  description?: string;
   onChange?: (value: boolean) => void;
   disabled?: boolean;
+  formColumn?: boolean;
 };
 
 const Checkbox = (props: CheckboxProps): React.ReactElement => {
@@ -24,12 +26,24 @@ const Checkbox = (props: CheckboxProps): React.ReactElement => {
         props.onChange && props.onChange(!props.value);
       }}
     >
+      {props.formColumn && (
+        <div>
+          <IGSText tag="p" type="label-large" className="checkbox__label">
+            {props.label}
+          </IGSText>
+          <IGSText type="label-medium" className="checkbox__description">
+            {props.description}
+          </IGSText>
+        </div>
+      )}
       <div className={cssClassNames}>
         <IGSIcon className="checkbox__icon" type="tick2" />
       </div>
-      <IGSText type="label-medium" className="checkbox__label">
-        {props.label}
-      </IGSText>
+      {!props.formColumn && (
+        <IGSText type="label-medium" className="checkbox__label">
+          {props.label}
+        </IGSText>
+      )}
     </div>
   );
 };
