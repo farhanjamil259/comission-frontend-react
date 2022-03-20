@@ -16,7 +16,7 @@ type SelectInputProps = {
 };
 
 const SelectInput = (props: SelectInputProps): React.ReactElement => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <div
