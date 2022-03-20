@@ -1,0 +1,23 @@
+{
+  "Print to console": {
+    "scope": "typescriptreact",
+    "prefix": "rcx",
+    "body": [
+      "import classNames from 'classnames';",
+      "import React from 'react';",
+      "",
+      "type $1Props = {",
+      "  children?: React.ReactElement | React.ReactElement[];",
+      "};",
+      "",
+      "const $1 = (props: $1Props): React.ReactElement => {",
+      "  const coreClass = '$2';",
+      "  const className = classNames(coreClass);",
+      "  return <div className={className}>{props.children}</div>;",
+      "};",
+      "",
+      "export default $1;"
+    ],
+    "description": "Create React Component"
+  }
+}
