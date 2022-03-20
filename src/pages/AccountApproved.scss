@@ -1,0 +1,27 @@
+.account-approved {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  &__content {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 130px;
+    text-align: center;
+  }
+
+  &__label {
+    margin-top: 40px;
+    margin-bottom: 5px;
+    color: $light-100;
+  }
+
+  &__subtext {
+    margin-bottom: 70px;
+    color: $dark-100;
+  }
+}
