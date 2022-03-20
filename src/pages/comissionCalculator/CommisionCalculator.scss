@@ -1,10 +1,11 @@
 .igs-timeline {
   margin: 0;
   list-style: none;
-  padding: 0px 2rem;
+  padding: 0 2rem;
 
-  //   --hue: 1;
   --unit: 1rem;
+
+  $timeline: &;
 
   &__title {
     margin: 0;
@@ -26,8 +27,6 @@
     font-size: 13px;
   }
 
-  $__timeline: &;
-
   &__lead {
     margin: 0;
     margin-top: 50px;
@@ -36,7 +35,6 @@
   }
 
   &__card {
-    --height: 7rem;
     position: relative;
     display: block;
     background-color: $dark-400;
@@ -44,23 +42,25 @@
     min-height: 7rem;
     margin-bottom: 2rem;
 
+    --height: 7rem;
+
     &--warning {
       background-color: $yellow-200;
       border-color: $yellow-200;
 
-      #{$__timeline}__title {
+      #{$timeline}__title {
         color: $dark-500;
       }
 
-      #{$__timeline}__lead {
+      #{$timeline}__lead {
         color: $dark-500;
       }
 
-      #{$__timeline}__dh {
+      #{$timeline}__dh {
         color: $dark-400;
       }
 
-      #{$__timeline}__dd {
+      #{$timeline}__dd {
         color: $dark-400;
       }
     }
@@ -69,19 +69,19 @@
       background-color: $dark-400;
       border-color: $dark-400;
 
-      #{$__timeline}__title {
+      #{$timeline}__title {
         color: $dark-100;
       }
 
-      #{$__timeline}__lead {
+      #{$timeline}__lead {
         color: $light-100;
       }
 
-      #{$__timeline}__dh {
+      #{$timeline}__dh {
         color: $dark-200;
       }
 
-      #{$__timeline}__dd {
+      #{$timeline}__dd {
         color: $light-100;
       }
     }
@@ -90,19 +90,19 @@
       background-color: $dark-300;
       border-color: $dark-300;
 
-      #{$__timeline}__title {
+      #{$timeline}__title {
         color: $light-500;
       }
 
-      #{$__timeline}__lead {
+      #{$timeline}__lead {
         color: $light-100;
       }
 
-      #{$__timeline}__dh {
+      #{$timeline}__dh {
         color: $dark-200;
       }
 
-      #{$__timeline}__dd {
+      #{$timeline}__dd {
         color: $light-100;
       }
     }
@@ -116,19 +116,19 @@
       background-color: $red-400;
       border-color: $red-400;
 
-      #{$__timeline}__title {
+      #{$timeline}__title {
         color: $light-100;
       }
 
-      #{$__timeline}__lead {
+      #{$timeline}__lead {
         color: $light-100;
       }
 
-      #{$__timeline}__dh {
+      #{$timeline}__dh {
         color: $light-400;
       }
 
-      #{$__timeline}__dd {
+      #{$timeline}__dd {
         color: $light-400;
       }
     }
@@ -167,91 +167,6 @@
     }
   }
 }
-
-// @media (min-width: 550px) and (max-width: 899px) {
-//   li {
-//     margin: 1rem;
-//     width: calc(50% - 4rem);
-//     float: left;
-//     min-height: var(--height);
-
-//     &:nth-child(4n + 3),
-//     &:nth-child(4n + 4) {
-//       float: right;
-//     }
-
-//     &:nth-child(4n + 1) {
-//       &::before {
-//         top: calc(var(--height) / 2 + var(--unit) / 2);
-//         left: 100%;
-//       }
-
-//       &::after {
-//         top: calc(var(--height) / 2);
-//         left: calc(100% + (var(--unit)));
-//         border: var(--unit) solid transparent;
-//         border-left-color: inherit;
-//       }
-//     }
-
-//     &:nth-child(4n + 3) {
-//       &::before {
-//         top: calc(var(--height) / 2 + var(--unit) / 2);
-//         left: -1rem;
-//       }
-
-//       &::after {
-//         top: calc(var(--height) / 2);
-//         left: -3rem;
-//         border: var(--unit) solid transparent;
-//         border-right-color: inherit;
-//       }
-//     }
-//   }
-// }
-
-// @media (min-width: 900px) and (max-width: 1199px) {
-//   li {
-//     margin: 1rem;
-//     width: calc(33.33% - 4rem);
-//     float: left;
-//     min-height: 7rem;
-
-//     &:nth-child(6n + 4),
-//     &:nth-child(6n + 5),
-//     &:nth-child(6n + 6) {
-//       float: right;
-//     }
-
-//     &:nth-child(6n + 1)::before,
-//     &:nth-child(6n + 2)::before {
-//       top: calc(var(--height) / 2 + var(--unit) / 2);
-//       left: 100%;
-//     }
-
-//     &:nth-child(6n + 1)::after,
-//     &:nth-child(6n + 2)::after {
-//       top: 3.5rem;
-//       left: calc(100% + (var(--unit)));
-//       border: var(--unit) solid transparent;
-//       border-left-color: inherit;
-//     }
-
-//     &:nth-child(6n + 4)::before,
-//     &:nth-child(6n + 5)::before {
-//       top: calc(var(--height) / 2 + var(--unit) / 2);
-//       left: -1rem;
-//     }
-
-//     &:nth-child(6n + 4)::after,
-//     &:nth-child(6n + 5)::after {
-//       top: calc(var(--height) / 2);
-//       left: -3rem;
-//       border: var(--unit) solid transparent;
-//       border-right-color: inherit;
-//     }
-//   }
-// }
 
 @media (min-width: 1200px) {
   .igs-timeline {
