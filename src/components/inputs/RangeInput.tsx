@@ -59,7 +59,7 @@ const RangeInput = (props: RangeInputProps): React.ReactElement => {
       <div>
         {(props.label || props.description) && (
           <div className={textClass}>
-            <IGSText type="label-large" className="igs-range__label">
+            <IGSText type="label-large" tag="p" className="igs-range__label">
               {props.label}
             </IGSText>
             <IGSText type="label-medium" className="igs-range__description">

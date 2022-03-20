@@ -18,64 +18,41 @@ const ContractAddStepThree = (props: CustomFormProps): React.ReactElement => {
   return (
     <CustomForm id={props.id} title="Define TIERS">
       <XFlex column>
-        <XFlex>
-          <div>
-            <TypoText color="dark-100" marginBottom="small">
-              Enable Retroactive Tiers?
-            </TypoText>
-            <TypoText size="small" color="dark-200" marginBottom="medium">
-              Apply upper tier commission on all sales.
-            </TypoText>
-          </div>
-          <Checkbox />
-        </XFlex>
+        <Checkbox
+          formColumn
+          label=" Enable Retroactive Tiers?"
+          description=" Apply upper tier commission on all sales."
+        />
         <IGSInput label="Tier Name" />
         <IGSInput type="percent" label="Commission" />
-        <XFlex column gap={60}>
-          <div>
-            <TypoText color="dark-100" marginBottom="small">
-              Target USD
-            </TypoText>
-            <TypoText size="small" color="dark-200">
-              Apply upper tier commission on all sales.
-            </TypoText>
-          </div>
-          <RangeInput
-            step={5}
-            min={0}
-            max={100}
-            type="slider"
-            sliderValue={val}
-            onChange={(event): void => {
-              setVal(event as number);
-            }}
-            color="primary"
-            marks={{ 0: "0M", 25: "25M", 50: "50M", 75: "75M", 100: "100M" }}
-          />
-        </XFlex>
-        <XFlex column gap={60}>
-          <XFlex column gap={4}>
-            <TypoText color="dark-100">Target Applicable</TypoText>
-            <TypoText size="small" color="dark-200">
-              Apply upper tier commission on all sales.
-            </TypoText>
-          </XFlex>
-          <RangeInput
-            min={1}
-            max={30}
-            type="range"
-            rangeValues={range}
-            onChange={(event): void => {
-              setRange(event as number[]);
-            }}
-            color="primary"
-            marks={{ 1: "1st", 5: "5th", 10: "10th", 15: "15th", 30: "30th" }}
-          />
-        </XFlex>
-        <XFlex>
-          <div></div>
-          <Button text="Add Tier" variant="success" rounded />
-        </XFlex>
+        <RangeInput
+          label=" Target USD"
+          description="  Apply upper tier commission on all sales."
+          step={5}
+          min={0}
+          max={100}
+          type="slider"
+          sliderValue={val}
+          onChange={(event): void => {
+            setVal(event as number);
+          }}
+          color="primary"
+          marks={{ 0: "0M", 25: "25M", 50: "50M", 75: "75M", 100: "100M" }}
+        />
+        <RangeInput
+          label="Target Applicable"
+          description=" Apply upper tier commission on all sales."
+          min={1}
+          max={30}
+          type="range"
+          rangeValues={range}
+          onChange={(event): void => {
+            setRange(event as number[]);
+          }}
+          color="primary"
+          marks={{ 1: "1st", 5: "5th", 10: "10th", 15: "15th", 30: "30th" }}
+        />
+        <Button text="Add Tier" variant="success" rounded />
         {/* <Card border>
           <XFlex>
             <div>

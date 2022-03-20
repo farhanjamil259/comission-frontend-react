@@ -44,36 +44,27 @@ const ContractAddStepTwo = (props: CustomFormProps): React.ReactElement => {
   ];
   return (
     <CustomForm id={props.id} title="Commission Criteria per Solution">
-      <XFlex column>
-        {/* TODO: replace with input field */}
-        <SelectInput
-          label="COMMISSION METRIC"
-          searcheable
-          options={metricOptions}
-        />
-        <IGSInput type="percent" label="Base Commission" />
-        {/* TODO: replace with input field */}
-        <SelectInput label="SALE MODE" searcheable options={saleOptions} />
-        {/* TODO: replace with input field */}
-        <SelectInput
-          label="COMMISSION AGAINST"
-          searcheable
-          options={metricOptions}
-        />
-        <RadioInput options={commissionOptions} />
-        <XFlex>
-          <div>
-            <TypoText color="dark-100" marginBottom="small">
-              Target Based Contract?
-            </TypoText>
-            <TypoText size="small" color="dark-200">
-              Sale accelerators and decelerators will be enabled if this option
-              is set enabled.
-            </TypoText>
-          </div>
-          <Checkbox />
-        </XFlex>
-      </XFlex>
+      <SelectInput
+        label="COMMISSION METRIC"
+        searcheable
+        options={metricOptions}
+      />
+      <IGSInput type="percent" label="Base Commission" />
+
+      <SelectInput label="SALE MODE" searcheable options={saleOptions} />
+
+      <SelectInput
+        label="COMMISSION AGAINST"
+        searcheable
+        options={metricOptions}
+      />
+      <RadioInput options={commissionOptions} />
+      <Checkbox
+        label="Target Based Contract?"
+        description="Sale accelerators and decelerators will be enabled if this option
+              is set enabled."
+        formColumn
+      />
     </CustomForm>
   );
 };
