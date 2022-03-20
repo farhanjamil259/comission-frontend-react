@@ -33,6 +33,7 @@ const ContractAddStepEight = (props: CustomFormProps): React.ReactElement => {
     <CustomForm id={props.id} title="Finalize">
       <XFlex column>
         <IGSInput type="currency" label="TEAM LEAD COMMISSIONARGET" />
+        {/* TODO: replace with input field */}
         <SelectInput
           label="Minimum Service Duration"
           searcheable

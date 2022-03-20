@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string;
-  variant?: "success" | "primary" | "dark" | "danger";
+  variant?: "success" | "primary" | "dark" | "danger" | "secondary";
   rounded?: boolean;
 }
 
@@ -14,7 +14,6 @@ const Button = ({
   ...otherProps
 }: ButtonProps): React.ReactElement => {
   const coreClass = "igs-button";
-
   const buttonClass = classNames(coreClass, {
     [`${coreClass}--${variant}`]: variant,
     [`${coreClass}--rounded`]: rounded,

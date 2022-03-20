@@ -56,11 +56,13 @@ const ContractAddStepOne = (props: CustomFormProps): React.ReactElement => {
     <CustomForm id={props.id} title="Add Product">
       <XFlex column>
         <RadioInput options={radioOptions} />
+        {/* TODO: replace with input field */}
         <SelectInput
           label="Service Type"
           searcheable
           options={serviceTypeOptions}
         />
+        {/* TODO: replace with input field */}
         <SelectInput label="Fequency" searcheable options={frequencyOptions} />
         <IGSInput label="Name" />
         <IGSInput label="ACTUAL COST" type="currency" />

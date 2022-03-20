@@ -1,0 +1,35 @@
+.deal-item {
+  padding: 15px 32px;
+  border-top: 1px solid $dark-400;
+  border-bottom: 1px solid $dark-400;
+
+  &:nth-child(odd) {
+    background-color: #181822;
+  }
+
+  &__status {
+    color: $green-400;
+    margin-bottom: 9px;
+  }
+
+  &__label {
+    margin-bottom: 17px;
+  }
+
+  &__id {
+    color: $dark-200;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    &--label {
+      color: $dark-200;
+    }
+
+    &--value {
+      color: $dark-100;
+    }
+  }
+}

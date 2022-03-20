@@ -1,16 +1,28 @@
 import React from "react";
-import RangeInput from "../../components/inputs/RangeInput";
+import IGSInput from "../../components/inputs/IGSInput";
+import SelectInput from "../../components/inputs/SelectInput";
 
 const FarhanComponents = (): React.ReactElement => {
   return (
     <div>
-      <RangeInput
-        type="range"
-        min={0}
-        max={100}
-        rangeValues={[2, 80]}
-        step={10}
-        marks={{ 0: "25M", 100: "100M" }}
+      <SelectInput
+        label="test"
+        options={[
+          {
+            label: "asd",
+            value: "asd2",
+          },
+        ]}
+      />
+
+      <IGSInput
+        label="Test"
+        options={[
+          {
+            label: "asd",
+            value: "asd2",
+          },
+        ]}
       />
     </div>
   );
