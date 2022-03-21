@@ -34,8 +34,10 @@ const Register = (): React.ReactElement => {
             />
             <IGSInput type="password" label="Password" placeholder="secret" />
             <XFlex>
-              <Checkbox label="Remeber Me" value={true} />
-              <ActionLink text="Forgot Password?" />
+              <Checkbox
+                label="By continuing you agree to our Terms and Privacy"
+                value={true}
+              />
             </XFlex>
             <br />
             <XFlex>
