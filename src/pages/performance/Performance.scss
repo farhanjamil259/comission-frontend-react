@@ -1,9 +1,15 @@
 .performance {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template: "p-side-nav p-content" 100vh / 260px 1fr;
   height: 100vh;
 
   &__sidenav {
+    grid-area: p-side-nav;
     background-color: $dark-400;
+  }
+
+  &__content {
+    grid-area: p-content;
+    overflow-y: scroll;
   }
 }

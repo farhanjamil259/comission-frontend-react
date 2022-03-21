@@ -1,0 +1,32 @@
+.nav-stats {
+  margin: 19px;
+
+  &__ranges {
+    margin: 12px 0;
+  }
+
+  &__range {
+    &--label {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &--sub {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &--text {
+      color: $dark-200;
+    }
+
+    &--rate {
+    }
+
+    &--amount {
+      color: $dark-300;
+      margin-top: -25px;
+    }
+  }
+}
