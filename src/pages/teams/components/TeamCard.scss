@@ -1,0 +1,56 @@
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__avatar {
+    width: 70px;
+    height: 70px;
+    background-color: $dark-300;
+    border-radius: 16px;
+  }
+
+  &__team-name {
+    color: $dark-100;
+    text-align: center;
+    margin-top: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  &__info {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 34px;
+    margin-top: 14px;
+
+    &--label {
+      letter-spacing: 2px;
+      color: $dark-200;
+    }
+
+    &--value {
+      letter-spacing: 2px;
+      color: $dark-100;
+    }
+  }
+
+  &__members {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    margin: 20px 0;
+  }
+
+  &__member {
+    height: 25px;
+    width: 100%;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+}

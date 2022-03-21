@@ -12,7 +12,7 @@ type PerformanceCardProps = {
 
 const PerformanceCard = (props: PerformanceCardProps): React.ReactElement => {
   return (
-    <Card>
+    <Card fullWidth>
       <div className="performance-card">
         <div className="performance-card__label">
           <IGSIcon width="16px" height="16px" type={props.icon} />
