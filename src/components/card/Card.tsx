@@ -6,6 +6,7 @@ type CardProps = {
   radius?: "half" | "none";
   border?: boolean;
   noShadow?: boolean;
+  fullWidth?: boolean;
 };
 
 const Card = ({
@@ -13,6 +14,7 @@ const Card = ({
   radius,
   border,
   noShadow,
+  fullWidth,
 }: CardProps): React.ReactElement => {
   const coreClass = "igs-card";
   return (
@@ -23,6 +25,7 @@ const Card = ({
           [`${coreClass}--radius-none`]: radius === "none",
           [`${coreClass}--no-shadow`]: noShadow,
           [`${coreClass}--border`]: border,
+          [`${coreClass}--full-width`]: fullWidth,
         },
       ])}
     >

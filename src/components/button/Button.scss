@@ -25,12 +25,11 @@
   }
 
   &--dark {
-    background: $dark-400;
-    color: $dark-200;
+    background: $dark-300;
+    color: $light-100;
 
     &:hover {
-      background: $dark-300;
-      color: $dark-100;
+      background: $dark-200;
     }
   }
 

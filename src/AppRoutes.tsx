@@ -9,7 +9,7 @@ import Home from "./pages/Home";
 import Payouts from "./pages/Payouts";
 import Reports from "./pages/Reports";
 import Settings from "./pages/Settings";
-import Teams from "./pages/Teams";
+import Teams from "./pages/teams/Teams";
 
 export interface IRoute {
   title: string;
